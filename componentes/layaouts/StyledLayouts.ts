@@ -27,13 +27,12 @@ export const ContenedorIdioma = styled.div`
 	align-content: space-between;
 
 	width: 100%;
-	height: 100px;
 
 	@media ${device.mobileXS} {
-		margin-bottom: 100px;
+		margin-bottom: 85px;
 	}
 	@media ${device.tablet} {
-		margin-top: 63px;
+		margin-top: 43px;
 		margin-bottom: 0px;
 	}
 `;
@@ -44,7 +43,7 @@ export const Idioma = styled.h2`
 
 	color: ${(props) => props.theme.colors.primary};
 	font-family: 'Arial';
-	font-style: normal;
+	font-weight: 700;
 	text-align: center;
 	letter-spacing: 0px;
 
@@ -77,10 +76,8 @@ export const ButtondeIdioma = styled.button`
 
 export const ContenedorDeLogo = styled.div`
 	@media ${device.mobileXS} {
-		margin-bottom: 52px;
 	}
 	@media ${device.tablet} {
-		margin-bottom: 69px;
 	}
 `;
 
@@ -108,13 +105,11 @@ export const TextodeAbajo = styled.p`
 		font-size: 18px;
 		line-height: 15px;
 		margin-bottom: 95px;
-		margin-top: 180px;
 	}
 	@media ${device.tablet} {
 		font-size: 25px;
 		line-height: 30px;
 		margin-bottom: 120px;
-		margin-top: 170px;
 	}
 `;
 
@@ -123,7 +118,8 @@ export const ContenedorDeTexto = styled.div`
 	justify-content: center;
 
 	color: ${(props) => props.theme.colors.primary};
-	font-family: 'Kallisto Bold';
+	font-family: 'Kallisto';
+	font-weight: 700;
 	font-style: normal;
 
 	@media ${device.mobileXS} {

@@ -2,6 +2,11 @@ import styled from 'styled-components';
 import { device } from '../../utils/devices';
 
 export const Contenedor = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	height: 420px;
 	@media ${device.mobileXS} {
 	}
 	@media ${device.tablet} {
@@ -29,6 +34,8 @@ export const ContenedordeImput = styled.div`
 `;
 
 export const InputCodigo = styled.input`
+	font-family: 'abel';
+	font-weight: 400;
 	color: ${(props) => props.theme.colors.primary};
 	border: none;
 	background-color: transparent;
@@ -69,6 +76,8 @@ export const ContenedorDeBotones = styled.div`
 	}
 `;
 export const BotonContinuar = styled.button`
+	font-family: 'kallisto';
+	font-weight: 700;
 	background: transparent;
 	border: 2px solid ${(props) => props.theme.backgrounds.secondary};
 	border-radius: 5px;
@@ -96,6 +105,8 @@ export const BotonContinuar = styled.button`
 `;
 
 export const BotonYaTengoCuenta = styled.button`
+	font-family: 'kallisto';
+	font-weight: 700;
 	background: transparent;
 	border: 2px solid ${(props) => props.theme.backgrounds.secondary};
 	border-radius: 5px;
