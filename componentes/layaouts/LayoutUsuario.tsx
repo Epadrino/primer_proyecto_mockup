@@ -5,19 +5,17 @@ import {
 	ButtondeIdioma,
 	Contenedor,
 	ContenedorDeLogo,
-	ContenedorDeTexto,
 	ContenedorIdioma,
 	Idioma,
 	ImagenEscritorio,
 	ImagenTlf,
-	TextodeAbajo,
 } from './StyledLayouts';
 
 interface Props {
 	title?: string;
 	description?: string;
 }
-export const LayoutInicio: FC<PropsWithChildren<Props>> = ({
+export const LayoutUsuario: FC<PropsWithChildren<Props>> = ({
 	children,
 	title,
 	description,
@@ -71,7 +69,7 @@ export const LayoutInicio: FC<PropsWithChildren<Props>> = ({
 					/>
 				</ImagenEscritorio>
 			</ContenedorDeLogo>
-			<div>{children}</div>
+			{children}
 		</Contenedor>
 	);
 };

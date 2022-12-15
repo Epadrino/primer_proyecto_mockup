@@ -7,5 +7,6 @@ export const DarkTheme = {
 	backgrounds: {
 		primary: '#0D0D0D',
 		secondary: '#80D1FF',
+		tertiary: 'rgba(138, 138, 138, 05)',
 	},
 };

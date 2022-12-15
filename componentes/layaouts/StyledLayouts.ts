@@ -4,12 +4,10 @@ import { device } from '../../utils/devices';
 export const Contenedor = styled.div`
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: initial;
 	align-items: center;
 	align-content: space-between;
-
-	background: ${(props) => props.theme.backgrounds.primary};
-	width: 100%;
+	height: 1024px;
 
 	@media ${device.mobileXS} {
 		heigth: 800px;
@@ -123,7 +121,9 @@ export const ContenedorDeTexto = styled.div`
 	font-style: normal;
 
 	@media ${device.mobileXS} {
+		width: 300px;
 	}
 	@media ${device.tablet} {
+		width: 518px;
 	}
 `;

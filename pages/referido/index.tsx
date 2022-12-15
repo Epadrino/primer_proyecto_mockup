@@ -1,12 +1,11 @@
 import Image from 'next/image';
+import { BotonYaTengoCuenta, BotonContinuar } from '../../componentes/botones';
 import { LayoutInicio } from '../../componentes/layaouts';
 import {
 	ImagenEscritorio,
 	ImagenTlf,
 } from '../../componentes/layaouts/StyledLayouts';
 import {
-	BotonContinuar,
-	BotonYaTengoCuenta,
 	Contenedor,
 	ContenedorDeBotones,
 	ContenedordeImput,
@@ -40,8 +39,8 @@ export default function Referido() {
 					</ContenedorInfoIcon>
 				</ContenedordeImput>
 				<ContenedorDeBotones>
-					<BotonContinuar>Continuar</BotonContinuar>
-					<BotonYaTengoCuenta>Ya tengo una cuenta</BotonYaTengoCuenta>
+					<BotonContinuar />
+					<BotonYaTengoCuenta />
 				</ContenedorDeBotones>
 			</Contenedor>
 		</LayoutInicio>
