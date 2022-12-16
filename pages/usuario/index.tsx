@@ -24,7 +24,7 @@ export default function Usuario() {
 	useEffect(() => {}, [mostrarMensaje]);
 
 	return (
-		<LayoutUsuario>
+		<LayoutUsuario title='usuario'>
 			<TituloUsuario>Crea un usuario</TituloUsuario>
 			<Pregunta>¿Tienes dudas?</Pregunta>
 			<InputUsuario />

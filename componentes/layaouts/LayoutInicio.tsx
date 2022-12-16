@@ -1,13 +1,12 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { FC, PropsWithChildren } from 'react';
+import { Idioma } from '../idiomas';
 import {
-	ButtondeIdioma,
 	Contenedor,
 	ContenedorDeLogo,
 	ContenedorDeTexto,
 	ContenedorIdioma,
-	Idioma,
 	ImagenEscritorio,
 	ImagenTlf,
 	TextodeAbajo,
@@ -36,21 +35,7 @@ export const LayoutInicio: FC<PropsWithChildren<Props>> = ({
 				<link rel='ico' href='/images/logo/logo_mockup.png' />
 			</Head>
 			<ContenedorIdioma>
-				<Image
-					src='/images/iconos/mundo.png'
-					alt='Cargando Logo'
-					width={19.17}
-					height={19.17}
-				/>
-				<Idioma>ESP</Idioma>
-				<ButtondeIdioma>
-					<Image
-						src='/images/iconos/flecha_de_idioma.png'
-						alt='Cargando Logo'
-						width={17.06}
-						height={9.3}
-					/>
-				</ButtondeIdioma>
+				<Idioma />
 			</ContenedorIdioma>
 			<ContenedorDeLogo>
 				<ImagenTlf>
@@ -71,7 +56,7 @@ export const LayoutInicio: FC<PropsWithChildren<Props>> = ({
 					/>
 				</ImagenEscritorio>
 			</ContenedorDeLogo>
-			<div>{children}</div>
+			{children}
 			<ContenedorDeTexto>
 				<TextodeAbajo>
 					Vive la mejor experiencia y obtén los mejores resulados.

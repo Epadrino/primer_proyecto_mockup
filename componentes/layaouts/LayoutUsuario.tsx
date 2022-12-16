@@ -1,12 +1,11 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { FC, PropsWithChildren } from 'react';
+import { Idioma } from '../idiomas';
 import {
-	ButtondeIdioma,
 	Contenedor,
 	ContenedorDeLogo,
 	ContenedorIdioma,
-	Idioma,
 	ImagenEscritorio,
 	ImagenTlf,
 } from './StyledLayouts';
@@ -34,21 +33,7 @@ export const LayoutUsuario: FC<PropsWithChildren<Props>> = ({
 				<link rel='ico' href='/images/logo/logo_mockup.png' />
 			</Head>
 			<ContenedorIdioma>
-				<Image
-					src='/images/iconos/mundo.png'
-					alt='Cargando Logo'
-					width={19.17}
-					height={19.17}
-				/>
-				<Idioma>ESP</Idioma>
-				<ButtondeIdioma>
-					<Image
-						src='/images/iconos/flecha_de_idioma.png'
-						alt='Cargando Logo'
-						width={17.06}
-						height={9.3}
-					/>
-				</ButtondeIdioma>
+				<Idioma />
 			</ContenedorIdioma>
 			<ContenedorDeLogo>
 				<ImagenTlf>
@@ -69,7 +54,7 @@ export const LayoutUsuario: FC<PropsWithChildren<Props>> = ({
 					/>
 				</ImagenEscritorio>
 			</ContenedorDeLogo>
-			{children}
+			<>{children}</>
 		</Contenedor>
 	);
 };

@@ -7,8 +7,10 @@ export const Contenedor = styled.div`
 	justify-content: center;
 
 	@media ${device.mobileXS} {
+		margin-top: 26px;
 	}
 	@media ${device.tablet} {
+		margin-bottom: 60px;
 	}
 `;
 
@@ -24,12 +26,10 @@ export const TituloUsuario = styled.h1`
 	color: ${(props) => props.theme.colors.primary};
 
 	@media ${device.mobileXS} {
-		margin-top: 26px;
 		font-size: 20px;
 		line-height: 25.49px;
 	}
 	@media ${device.tablet} {
-		margin-top: 0px;
 		font-size: 30px;
 		line-height: 41px;
 	}
@@ -171,6 +171,5 @@ export const ContenedorDeBoton = styled.div`
 	}
 	@media ${device.tablet} {
 		margin-top: 44px;
-		margin-bottom: 100px;
 	}
 `;

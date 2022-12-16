@@ -1,12 +1,12 @@
-import { ContenedordeImput, InputDeCorreo } from './StyledInputs';
+import { ContenedordeInputCorreo, InputDeCorreo } from './StyledInputs';
 
 export const InputCorreo = () => {
 	return (
-		<ContenedordeImput>
+		<ContenedordeInputCorreo>
 			<InputDeCorreo
 				type='text'
 				placeholder='Ingresa un correo electrónico'
 			/>
-		</ContenedordeImput>
+		</ContenedordeInputCorreo>
 	);
 };

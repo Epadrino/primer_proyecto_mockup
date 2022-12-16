@@ -3,6 +3,7 @@ export const DarkTheme = {
 		primary: '#FFFFFF',
 		secondary: '#80D1FF',
 		tertiary: '#0D0D0D',
+		header: '#131313',
 	},
 	backgrounds: {
 		primary: '#0D0D0D',

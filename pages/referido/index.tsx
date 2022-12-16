@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { BotonYaTengoCuenta, BotonContinuar } from '../../componentes/botones';
 import { InputCodigo } from '../../componentes/inputs';
 import { LayoutInicio } from '../../componentes/layaouts';
@@ -6,7 +5,7 @@ import { Contenedor, ContenedorDeBotones } from './StyledReferido';
 
 export default function Referido() {
 	return (
-		<LayoutInicio>
+		<LayoutInicio title='Referido'>
 			<Contenedor>
 				<InputCodigo />
 				<ContenedorDeBotones>

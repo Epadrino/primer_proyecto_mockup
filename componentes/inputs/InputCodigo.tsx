@@ -1,14 +1,14 @@
 import Image from 'next/image';
 import { ImagenEscritorio, ImagenTlf } from '../layaouts/StyledLayouts';
 import {
-	ContenedordeImput,
+	ContenedordeInputCodigo,
 	ContenedorInfoIcon,
 	InputDeCodigo,
 } from './StyledInputs';
 
 export const InputCodigo = () => {
 	return (
-		<ContenedordeImput>
+		<ContenedordeInputCodigo>
 			<InputDeCodigo type='text' placeholder='Código de referido' />
 			<ContenedorInfoIcon>
 				<ImagenTlf>
@@ -28,6 +28,6 @@ export const InputCodigo = () => {
 					/>
 				</ImagenEscritorio>
 			</ContenedorInfoIcon>
-		</ContenedordeImput>
+		</ContenedordeInputCodigo>
 	);
 };

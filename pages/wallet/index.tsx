@@ -5,7 +5,7 @@ import { Contenedor, TituloWalled } from './StyledWalled';
 
 export default function Wallet() {
 	return (
-		<LayoutInicio>
+		<LayoutInicio title='Wallet'>
 			<Contenedor>
 				<TituloWalled>Conecta tu Wallet.</TituloWalled>
 				<BotonMetaMask />

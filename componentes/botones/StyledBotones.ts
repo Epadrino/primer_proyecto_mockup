@@ -42,7 +42,6 @@ export const ButtonYaTengoCuenta = styled.button`
 	@media ${device.mobileXS} {
 		height: 33px;
 		width: 151px;
-		margin-left: 8px;
 		border-radius: 3px;
 		font-size: 12px;
 		line-height: 14px;
@@ -51,7 +50,6 @@ export const ButtonYaTengoCuenta = styled.button`
 		height: 66px;
 		width: 258px;
 		border-radius: 5px;
-		margin-left: 15px;
 		font-size: 20px;
 		line-height: 24px;
 	}
@@ -80,6 +78,14 @@ export const ButtonMetaMask = styled.button`
 	}
 `;
 
+export const BotonDeSalir = styled.button`
+	background: transparent;
+	border: none;
+	@media ${device.mobileXS} {
+	}
+	@media ${device.tablet} {
+	}
+`;
 export const ButtonWallet = styled.button`
 	display: flex;
 	align-items: center;
