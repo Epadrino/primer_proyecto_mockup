@@ -7,7 +7,6 @@ export const Contenedor = styled.div`
 	justify-content: initial;
 	align-items: center;
 	align-content: space-between;
-	height: 1024px;
 
 	@media ${device.mobileXS} {
 		heigth: 800px;
@@ -27,7 +26,8 @@ export const ContenedorIdioma = styled.div`
 	width: 100%;
 
 	@media ${device.mobileXS} {
-		margin-bottom: 85px;
+		margin-top: 43px;
+		margin-bottom: 57px;
 	}
 	@media ${device.tablet} {
 		margin-top: 43px;
@@ -65,7 +65,7 @@ export const ButtondeIdioma = styled.button`
 	border: 0px;
 
 	@media ${device.mobileXS} {
-		margin-right: 39.65px;
+		margin-right: 20px;
 	}
 	@media ${device.tablet} {
 		margin-right: 74px;

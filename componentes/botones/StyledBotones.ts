@@ -16,7 +16,6 @@ export const ButtonContinuar = styled.button`
 		height: 33px;
 		width: 118px;
 		border-radius: 3px;
-		margin-right: 8px;
 		font-size: 12px;
 		line-height: 14px;
 	}
@@ -24,7 +23,6 @@ export const ButtonContinuar = styled.button`
 		height: 66px;
 		width: 217px;
 		border-radius: 5px;
-		margin-right: 15px;
 		font-size: 20px;
 		line-height: 24px;
 	}
@@ -44,6 +42,7 @@ export const ButtonYaTengoCuenta = styled.button`
 	@media ${device.mobileXS} {
 		height: 33px;
 		width: 151px;
+		margin-left: 8px;
 		border-radius: 3px;
 		font-size: 12px;
 		line-height: 14px;
@@ -52,6 +51,7 @@ export const ButtonYaTengoCuenta = styled.button`
 		height: 66px;
 		width: 258px;
 		border-radius: 5px;
+		margin-left: 15px;
 		font-size: 20px;
 		line-height: 24px;
 	}

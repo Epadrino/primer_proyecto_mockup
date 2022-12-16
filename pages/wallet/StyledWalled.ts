@@ -15,7 +15,7 @@ export const Contenedor = styled.div`
 	}
 `;
 
-export const Titulo = styled.h1`
+export const TituloWalled = styled.h1`
 	display: flex;
 	justify-content: center;
 	text-align: center;

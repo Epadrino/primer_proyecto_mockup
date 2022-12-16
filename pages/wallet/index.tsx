@@ -1,13 +1,13 @@
 import { BotonMetaMask } from '../../componentes/botones/BotonMetaMask';
 import { BotonWallet } from '../../componentes/botones';
 import { LayoutInicio } from '../../componentes/layaouts';
-import { Contenedor, Titulo } from './StyledWalled';
+import { Contenedor, TituloWalled } from './StyledWalled';
 
 export default function Wallet() {
 	return (
 		<LayoutInicio>
 			<Contenedor>
-				<Titulo>Conecta tu Wallet.</Titulo>
+				<TituloWalled>Conecta tu Wallet.</TituloWalled>
 				<BotonMetaMask />
 				<BotonWallet />
 			</Contenedor>
