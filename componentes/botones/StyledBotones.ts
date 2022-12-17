@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { device } from '../../utils/devices';
 
-export const ButtonContinuar = styled.button`
+export const BotonDeContinuar = styled.button`
 	font-family: 'kallisto';
 	font-weight: 700;
 	background: transparent;
@@ -28,7 +28,7 @@ export const ButtonContinuar = styled.button`
 	}
 `;
 
-export const ButtonYaTengoCuenta = styled.button`
+export const BotonDeTengoCuenta = styled.button`
 	font-family: 'kallisto';
 	font-weight: 700;
 	background: transparent;
@@ -55,7 +55,7 @@ export const ButtonYaTengoCuenta = styled.button`
 	}
 `;
 
-export const ButtonMetaMask = styled.button`
+export const BotonDeMetaMask = styled.button`
 	display: flex;
 	align-items: center;
 	font-family: 'kallisto';
@@ -81,12 +81,8 @@ export const ButtonMetaMask = styled.button`
 export const BotonDeSalir = styled.button`
 	background: transparent;
 	border: none;
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;
-export const ButtonWallet = styled.button`
+export const BotonDeWallet = styled.button`
 	display: flex;
 	align-items: center;
 	font-family: 'kallisto';
@@ -110,12 +106,7 @@ export const ButtonWallet = styled.button`
 		margin-top: 31px;
 	}
 `;
-export const ContenedorDeIcono = styled.div`
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
-`;
+
 export const FondodeIcono = styled.div`
 	display: flex;
 	justify-content: center;

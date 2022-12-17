@@ -1,5 +1,5 @@
-import { ButtonYaTengoCuenta } from './StyledBotones';
+import { BotonDeTengoCuenta } from './StyledBotones';
 
 export const BotonYaTengoCuenta = () => {
-	return <ButtonYaTengoCuenta>BotonYaTengoCuenta</ButtonYaTengoCuenta>;
+	return <BotonDeTengoCuenta>BotonYaTengoCuenta</BotonDeTengoCuenta>;
 };

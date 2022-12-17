@@ -10,7 +10,7 @@ interface Props {
 
 export const RedSocialInstagram: FC<PropsWithChildren<Props>> = ({ href }) => {
 	return (
-		<Link href={href}>
+		<Link href={href} passHref legacyBehavior>
 			<EnlaceRedes>
 				<Image
 					src='/images/iconos/icon_instagram.png'

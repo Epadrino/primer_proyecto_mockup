@@ -16,13 +16,6 @@ export const Contenedor = styled.div`
 	}
 `;
 
-export const ContenedorDeLogo = styled.div`
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
-`;
-
 export const ImagenTlf = styled.div`
 	@media ${device.mobileXS} {
 		display: contents;

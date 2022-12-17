@@ -7,11 +7,6 @@ export const Contenedor = styled.div`
 	justify-content: flex-end;
 	align-items: center;
 	align-content: space-between;
-
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;
 
 export const IdiomaActivo = styled.h2`
@@ -42,9 +37,4 @@ export const ButtondeIdioma = styled.button`
 	background-color: transparent;
 	border-radius: 0px;
 	border: 0px;
-
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;

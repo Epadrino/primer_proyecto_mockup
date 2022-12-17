@@ -9,7 +9,7 @@ interface Props {
 
 export const EnlaceMenu: FC<PropsWithChildren<Props>> = ({ text, href }) => {
 	return (
-		<Link href={href}>
+		<Link href={href} passHref legacyBehavior>
 			<Enlaces>{text}</Enlaces>
 		</Link>
 	);

@@ -1,8 +1,8 @@
 import { LayoutDentro } from '../componentes/layaouts';
 
-export default function Home() {
+export default function PlanesV() {
 	return (
-		<LayoutDentro title='Pagina principal'>
+		<LayoutDentro title='PlanesV'>
 			<div>
 				<div>
 					<h1>NOMBRE TARJETA</h1>
@@ -17,7 +17,7 @@ export default function Home() {
 						<button>Ver detalles</button>
 					</div>
 				</div>
-				<div>{/* componente */}</div>
+				<div></div>
 			</div>
 		</LayoutDentro>
 	);

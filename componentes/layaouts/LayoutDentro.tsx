@@ -5,10 +5,10 @@ import { BotonSalir } from '../botones';
 import { EnlaceMenu, EnlacePieDePagina } from '../enlaces';
 import { Idioma } from '../idiomas';
 import {
-	RedSocialInstagram,
-	RedSocialGmail,
-	RedSocialFacebook,
 	RedSocialDiscord,
+	RedSocialFacebook,
+	RedSocialGmail,
+	RedSocialInstagram,
 	RedSocialTwitter,
 } from '../redesSociales';
 import {
@@ -77,8 +77,8 @@ export const LayoutDentro: FC<PropsWithChildren<Props>> = ({
 				</ContenedorDeLogo>
 				<ContenedorDeMenu>
 					<ContenedorDeEnlaces>
-						<EnlaceMenu text='Mi página' href='./' />
-						<EnlaceMenu text='Soporte' href='./' />
+						<EnlaceMenu text='Mi página' href='' />
+						<EnlaceMenu text='Soporte' href='' />
 					</ContenedorDeEnlaces>
 					<SeparadorUno />
 					<Idioma />
@@ -87,7 +87,7 @@ export const LayoutDentro: FC<PropsWithChildren<Props>> = ({
 					</ContenedorDeBoton>
 				</ContenedorDeMenu>
 			</Cabezera>
-			<>{children}</>
+			{children}
 			<PieDePagina>
 				<ContenedorIzq>
 					<Image

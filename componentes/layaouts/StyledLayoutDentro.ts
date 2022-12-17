@@ -4,11 +4,6 @@ import { device } from '../../utils/devices';
 export const ContenedorLayout = styled.div`
 	display: flex;
 	flex-direction: column;
-
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;
 
 export const Cabezera = styled.div`
@@ -18,10 +13,6 @@ export const Cabezera = styled.div`
 	height: 144px;
 
 	background: ${(props) => props.theme.colors.header};
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;
 
 export const ContenedorDeLogo = styled.div`
@@ -61,11 +52,6 @@ export const ContenedorDeMenu = styled.div`
 	align-items: center;
 	justify-content: center;
 	gap: 30px;
-
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;
 export const ContenedorDeEnlaces = styled.div`
 	display: flex;
@@ -73,27 +59,15 @@ export const ContenedorDeEnlaces = styled.div`
 	justify-content: space-between;
 	gap: 58px;
 	width: 270px;
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;
 
 export const SeparadorUno = styled.hr`
 	height: 53px;
 	color: #424242;
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;
 
 export const ContenedorDeBoton = styled.div`
 	margin-right: 5%;
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;
 
 export const PieDePagina = styled.div`
@@ -103,19 +77,11 @@ export const PieDePagina = styled.div`
 
 	width: 100%;
 	height: 180px;
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;
 
 export const ContenedorIzq = styled.div`
 	display: flex;
 	margin-left: 8%;
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;
 
 export const ContenedorTextoUnoYDos = styled.div`
@@ -125,11 +91,6 @@ export const ContenedorTextoUnoYDos = styled.div`
 
 	width: 450px;
 	margin-left: 8%;
-
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;
 
 export const ContenedorTextosUno = styled.div`
@@ -137,32 +98,18 @@ export const ContenedorTextosUno = styled.div`
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
-
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;
 export const ContenedorTextosDos = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;
 
 export const SeparadorDos = styled.hr`
 	height: 15px;
 	color: ${(props) => props.theme.colors.primary};
 	margin: 6px;
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;
 
 export const ContenedorDer = styled.div`
@@ -172,10 +119,6 @@ export const ContenedorDer = styled.div`
 	align-items: center;
 
 	margin-right: 8%;
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;
 
 export const TextoRedes = styled.h2`
@@ -191,8 +134,4 @@ export const ContenedorRedesSociales = styled.div`
 	justify-content: center;
 	align-items: center;
 	gap: 12%;
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;

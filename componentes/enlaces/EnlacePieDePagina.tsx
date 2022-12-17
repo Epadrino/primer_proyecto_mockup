@@ -12,7 +12,7 @@ export const EnlacePieDePagina: FC<PropsWithChildren<Props>> = ({
 	href,
 }) => {
 	return (
-		<Link href={href}>
+		<Link href={href} passHref legacyBehavior>
 			<Enlaces>{text}</Enlaces>
 		</Link>
 	);

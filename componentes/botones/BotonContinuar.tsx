@@ -1,5 +1,5 @@
-import { ButtonContinuar } from './StyledBotones';
+import { BotonDeContinuar } from './StyledBotones';
 
 export const BotonContinuar = () => {
-	return <ButtonContinuar>Continuar</ButtonContinuar>;
+	return <BotonDeContinuar>Continuar</BotonDeContinuar>;
 };

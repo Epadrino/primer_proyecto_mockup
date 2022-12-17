@@ -4,7 +4,6 @@ import { FC, PropsWithChildren } from 'react';
 import { Idioma } from '../idiomas';
 import {
 	Contenedor,
-	ContenedorDeLogo,
 	ContenedorDeTexto,
 	ContenedorIdioma,
 	ImagenEscritorio,
@@ -37,7 +36,7 @@ export const LayoutInicio: FC<PropsWithChildren<Props>> = ({
 			<ContenedorIdioma>
 				<Idioma />
 			</ContenedorIdioma>
-			<ContenedorDeLogo>
+			<>
 				<ImagenTlf>
 					<Image
 						src='/images/logo/logo_mockup.png'
@@ -55,7 +54,7 @@ export const LayoutInicio: FC<PropsWithChildren<Props>> = ({
 						height={351}
 					/>
 				</ImagenEscritorio>
-			</ContenedorDeLogo>
+			</>
 			{children}
 			<ContenedorDeTexto>
 				<TextodeAbajo>

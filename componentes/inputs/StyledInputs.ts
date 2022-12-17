@@ -7,11 +7,6 @@ export const ContenedordeInputCodigo = styled.div`
 	align-items: center;
 	justify-content: space-evenly;
 	position: relative;
-
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;
 
 export const ContenedordeInputUsuario = styled.div`

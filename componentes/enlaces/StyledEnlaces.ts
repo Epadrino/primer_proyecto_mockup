@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { device } from '../../utils/devices';
 
 export const Enlaces = styled.a`
 	font-family: 'Kallisto';
@@ -9,9 +8,4 @@ export const Enlaces = styled.a`
 	text-decoration: none;
 
 	color: ${(props) => props.theme.colors.primary};
-
-	@media ${device.mobileXS} {
-	}
-	@media ${device.tablet} {
-	}
 `;
