@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
-import GlobalStyle from '../styled-components/GlobalStyles.styled';
+import GlobalStyle from '../styles/GlobalStyles.styled';
 import { DarkTheme } from '../styles/theme';
 
 export default function App({ Component, pageProps }: AppProps) {

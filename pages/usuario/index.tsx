@@ -2,6 +2,7 @@ import { BotonContinuar } from '../../componentes/botones';
 import { InputCorreo, InputUsuario } from '../../componentes/inputs';
 import { LayoutUsuario } from '../../componentes/layaouts';
 import { useEstado } from '../../hooks';
+
 import {
 	BotonDeLeerMas,
 	MensajeDos,
@@ -15,7 +16,7 @@ import {
 } from './StyledUsuario';
 
 export default function Usuario() {
-	const { estado, mostrar } = useEstado(false);
+	const { estado, mostrarOcultar } = useEstado(false);
 
 	return (
 		<LayoutUsuario title='Usuario'>
@@ -32,7 +33,7 @@ export default function Usuario() {
 					{estado
 						? ` que este será el usuario que aparece en tu link dereferido.`
 						: ` ...`}
-					<BotonDeLeerMas onClick={mostrar}>
+					<BotonDeLeerMas onClick={mostrarOcultar}>
 						{estado ? 'leer menos' : 'leer más'}
 					</BotonDeLeerMas>
 				</MensajeDos>

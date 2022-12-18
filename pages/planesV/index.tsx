@@ -1,10 +1,11 @@
-import { LayoutDentro } from '../componentes/layaouts';
+import { LayoutDentro } from '../../componentes/layaouts';
+import { Contenedor, ContenedorDer, ContenedorIzq } from './StyledPlanesV';
 
 export default function PlanesV() {
 	return (
 		<LayoutDentro title='PlanesV'>
-			<div>
-				<div>
+			<Contenedor>
+				<ContenedorIzq>
 					<h1>NOMBRE TARJETA</h1>
 					<h1>200 USD</h1>
 					<p>
@@ -16,9 +17,9 @@ export default function PlanesV() {
 						<button>Ir a pagar</button>
 						<button>Ver detalles</button>
 					</div>
-				</div>
-				<div></div>
-			</div>
+				</ContenedorIzq>
+				<ContenedorDer></ContenedorDer>
+			</Contenedor>
 		</LayoutDentro>
 	);
 }
