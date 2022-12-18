@@ -81,6 +81,17 @@ export const BotonDeMetaMask = styled.button`
 export const BotonDeSalir = styled.button`
 	background: transparent;
 	border: none;
+	padding: 0;
+`;
+export const BotonDeX = styled.button`
+	background: transparent;
+	border: none;
+	padding: 0;
+`;
+export const BotonDeMenuTlf = styled.button`
+	background: transparent;
+	border: none;
+	padding: 0;
 `;
 export const BotonDeWallet = styled.button`
 	display: flex;

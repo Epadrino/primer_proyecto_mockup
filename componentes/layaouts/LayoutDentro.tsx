@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { FC, PropsWithChildren } from 'react';
-import { BotonSalir } from '../botones';
-import { EnlaceMenu, EnlacePieDePagina } from '../enlaces';
-import { Idioma } from '../idiomas';
+import { EnlacePieDePagina } from '../enlaces';
+import { Menu, MenuDeslizante } from '../menu';
+
 import {
 	RedSocialDiscord,
 	RedSocialFacebook,
@@ -12,23 +12,21 @@ import {
 	RedSocialTwitter,
 } from '../redesSociales';
 import {
+	ContenedorMenuEsc,
 	Cabezera,
-	ContenedorDeEnlaces,
 	ContenedorDeLogo,
 	ContenedorLayout,
 	ContenedorRedesSociales,
 	PieDePagina,
-	SeparadorUno,
-	ContenedorDeMenu,
-	ContenedorDeBoton,
 	Titulo,
 	ContenedorIzq,
 	ContenedorDer,
 	ContenedorTextosUno,
 	ContenedorTextosDos,
-	SeparadorDos,
+	Separador,
 	ContenedorTextoUnoYDos,
 	TextoRedes,
+	ContenedorDeMenu,
 } from './StyledLayoutDentro';
 import { ImagenEscritorio, ImagenTlf } from './StyledLayouts';
 
@@ -72,19 +70,14 @@ export const LayoutDentro: FC<PropsWithChildren<Props>> = ({
 							width={78}
 							height={78}
 						/>
-						<Titulo>LOGO MOCKUP</Titulo>
 					</ImagenEscritorio>
+					<Titulo>LOGO MOCKUP</Titulo>
 				</ContenedorDeLogo>
 				<ContenedorDeMenu>
-					<ContenedorDeEnlaces>
-						<EnlaceMenu text='Mi página' href='' />
-						<EnlaceMenu text='Soporte' href='' />
-					</ContenedorDeEnlaces>
-					<SeparadorUno />
-					<Idioma />
-					<ContenedorDeBoton>
-						<BotonSalir />
-					</ContenedorDeBoton>
+					<ContenedorMenuEsc>
+						<Menu />
+					</ContenedorMenuEsc>
+					<MenuDeslizante />
 				</ContenedorDeMenu>
 			</Cabezera>
 			{children}
@@ -107,7 +100,7 @@ export const LayoutDentro: FC<PropsWithChildren<Props>> = ({
 								href=''
 								text='Politica de Privacidad'
 							/>
-							<SeparadorDos />
+							<Separador />
 							<EnlacePieDePagina
 								href=''
 								text='Terminos y condiciones'

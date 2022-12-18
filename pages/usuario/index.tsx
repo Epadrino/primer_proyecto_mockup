@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
 import { BotonContinuar } from '../../componentes/botones';
 import { InputCorreo, InputUsuario } from '../../componentes/inputs';
 import { LayoutUsuario } from '../../componentes/layaouts';
+import { useEstado } from '../../hooks';
 import {
 	BotonDeLeerMas,
 	MensajeDos,
@@ -15,13 +15,7 @@ import {
 } from './StyledUsuario';
 
 export default function Usuario() {
-	const [mensaje, setmensaje] = useState(false);
-
-	const mostrarMensaje = () => {
-		setmensaje(!mensaje);
-	};
-
-	useEffect(() => {}, [mostrarMensaje]);
+	const { estado, mostrar } = useEstado(false);
 
 	return (
 		<LayoutUsuario title='Usuario'>
@@ -35,11 +29,11 @@ export default function Usuario() {
 				</MensajeUno>
 				<MensajeDos>
 					Usa solo letras y números. Recuerda
-					{mensaje
+					{estado
 						? ` que este será el usuario que aparece en tu link dereferido.`
 						: ` ...`}
-					<BotonDeLeerMas onClick={mostrarMensaje}>
-						{mensaje ? 'leer menos' : 'leer más'}
+					<BotonDeLeerMas onClick={mostrar}>
+						{estado ? 'leer menos' : 'leer más'}
 					</BotonDeLeerMas>
 				</MensajeDos>
 			</ContenedorMensajeUno>

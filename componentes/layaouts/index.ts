@@ -1,3 +1,3 @@
-export { LayoutDentro } from './LayoutDentro';
-export { LayoutInicio } from './LayoutInicio';
-export { LayoutUsuario } from './LayoutUsuario';
+export * from './LayoutDentro';
+export * from './LayoutInicio';
+export * from './LayoutUsuario';

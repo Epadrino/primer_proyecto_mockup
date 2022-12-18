@@ -12,7 +12,12 @@ export const Cabezera = styled.div`
 	width: 100%;
 	height: 144px;
 
-	background: ${(props) => props.theme.colors.header};
+	@media ${device.mobileXS} {
+		background: ${(props) => props.theme.colors.prymary};
+	}
+	@media ${device.tablet} {
+		background: ${(props) => props.theme.colors.header};
+	}
 `;
 
 export const ContenedorDeLogo = styled.div`
@@ -46,28 +51,31 @@ export const Titulo = styled.h1`
 		line-height: 29px;
 	}
 `;
-
 export const ContenedorDeMenu = styled.div`
+	@media ${device.mobileXS} {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	@media ${device.tablet} {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+`;
+export const ContenedorMenuEsc = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 30px;
-`;
-export const ContenedorDeEnlaces = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 58px;
-	width: 270px;
-`;
 
-export const SeparadorUno = styled.hr`
-	height: 53px;
-	color: #424242;
-`;
-
-export const ContenedorDeBoton = styled.div`
-	margin-right: 5%;
+	@media ${device.mobileXS} {
+		display: none;
+	}
+	@media ${device.tablet} {
+		display: contents;
+		display: flex;
+	}
 `;
 
 export const PieDePagina = styled.div`
@@ -77,6 +85,13 @@ export const PieDePagina = styled.div`
 
 	width: 100%;
 	height: 180px;
+	@media ${device.mobileXS} {
+		display: none;
+	}
+	@media ${device.tablet} {
+		display: contents;
+		display: flex;
+	}
 `;
 
 export const ContenedorIzq = styled.div`
@@ -106,7 +121,7 @@ export const ContenedorTextosDos = styled.div`
 	align-items: center;
 `;
 
-export const SeparadorDos = styled.hr`
+export const Separador = styled.hr`
 	height: 15px;
 	color: ${(props) => props.theme.colors.primary};
 	margin: 6px;

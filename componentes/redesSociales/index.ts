@@ -1,5 +1,5 @@
-export { RedSocialFacebook } from './RedSocialFacebook';
-export { RedSocialDiscord } from './RedSocialDiscord';
-export { RedSocialGmail } from './RedSocialGmail';
-export { RedSocialInstagram } from './RedSocialInstagram';
-export { RedSocialTwitter } from './RedSocialTwitter';
+export * from './RedSocialFacebook';
+export * from './RedSocialDiscord';
+export * from './RedSocialGmail';
+export * from './RedSocialInstagram';
+export * from './RedSocialTwitter';

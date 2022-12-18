@@ -1,1 +1,1 @@
-export { Idioma } from './Idioma';
+export * from './Idioma';

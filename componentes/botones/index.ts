@@ -1,5 +1,7 @@
-export { BotonContinuar } from './BotonContinuar';
-export { BotonMetaMask } from './BotonMetaMask';
-export { BotonYaTengoCuenta } from './BotonYaTengoCuenta';
-export { BotonWallet } from './BotonWallet';
-export { BotonSalir } from './BotonSalir';
+export * from './BotonContinuar';
+export * from './BotonMetaMask';
+export * from './BotonYaTengoCuenta';
+export * from './BotonWallet';
+export * from './BotonSalir';
+export * from './BotonMenuTlf';
+export * from './BotonX';
