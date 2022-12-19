@@ -30,11 +30,11 @@ export default function PlanesV() {
 						elit, sed do eiusmod tempor incididunt ut labore et
 						dolore magna aliqua.”
 					</Parrafo>
-					<ContenedorDeBotones>
-						<BotonIrAPagar />
-						<BotonVerDetalles />
-					</ContenedorDeBotones>
 				</ContenedorIzq>
+				<ContenedorDeBotones>
+					<BotonIrAPagar />
+					<BotonVerDetalles />
+				</ContenedorDeBotones>
 				<ContenedorDer>
 					<ContenedorDeMuestra>producto</ContenedorDeMuestra>
 					<ContenedorDeProductos>

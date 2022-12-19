@@ -1,6 +1,11 @@
 import Image from 'next/image';
-import { BotonDeAbajo } from './StyledBotones';
+import styled from 'styled-components';
 
+const BotonDeAbajo = styled.button`
+	background: transparent;
+	border: none;
+	padding: 0;
+`;
 export const BotonAbajo = () => {
 	return (
 		<BotonDeAbajo>

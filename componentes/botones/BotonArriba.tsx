@@ -1,5 +1,11 @@
 import Image from 'next/image';
-import { BotonDeArriba } from './StyledBotones';
+import styled from 'styled-components';
+
+const BotonDeArriba = styled.button`
+	background: transparent;
+	border: none;
+	padding: 0;
+`;
 
 export const BotonArriba = () => {
 	return (

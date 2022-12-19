@@ -1,6 +1,12 @@
 import Image from 'next/image';
 import { FC } from 'react';
-import { BotonDeMenuTlf } from './StyledBotones';
+import styled from 'styled-components';
+
+const BotonDeMenuTlf = styled.button`
+	background: transparent;
+	border: none;
+	padding: 0;
+`;
 
 interface Props {
 	onClick: () => void;

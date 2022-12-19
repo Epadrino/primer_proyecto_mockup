@@ -10,12 +10,19 @@ export const Cabezera = styled.div`
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	height: 144px;
 
 	@media ${device.mobileXS} {
+		align-items: flex-end;
+		height: 80px;
+		margin-bottom: 20px;
+
 		background: ${(props) => props.theme.backgrounds.primary};
 	}
 	@media ${device.tablet} {
+		height: 150px;
+		align-items: center;
+		margin-bottom: 0px;
+
 		background: ${(props) => props.theme.backgrounds.header};
 	}
 `;

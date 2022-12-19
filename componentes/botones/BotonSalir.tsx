@@ -1,5 +1,11 @@
 import Image from 'next/image';
-import { BotonDeSalir } from './StyledBotones';
+import styled from 'styled-components';
+
+const BotonDeSalir = styled.button`
+	background: transparent;
+	border: none;
+	padding: 0;
+`;
 
 export const BotonSalir = () => {
 	return (

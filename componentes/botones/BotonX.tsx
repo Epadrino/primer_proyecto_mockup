@@ -1,6 +1,12 @@
 import Image from 'next/image';
 import { FC } from 'react';
-import { BotonDeX } from './StyledBotones';
+import styled from 'styled-components';
+
+const BotonDeX = styled.button`
+	background: transparent;
+	border: none;
+	padding: 0;
+`;
 
 interface Props {
 	onClick: () => void;
