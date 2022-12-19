@@ -9,3 +9,5 @@ export * from './BotonVerDetalles';
 export * from './BotonAbajo';
 export * from './BotonArriba';
 export * from './BotonWallet';
+export * from './BotonIzq';
+export * from './BotonDer';
