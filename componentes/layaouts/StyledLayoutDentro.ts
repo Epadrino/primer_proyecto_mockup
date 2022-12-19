@@ -13,10 +13,10 @@ export const Cabezera = styled.div`
 	height: 144px;
 
 	@media ${device.mobileXS} {
-		background: ${(props) => props.theme.colors.prymary};
+		background: ${(props) => props.theme.backgrounds.primary};
 	}
 	@media ${device.tablet} {
-		background: ${(props) => props.theme.colors.header};
+		background: ${(props) => props.theme.backgrounds.header};
 	}
 `;
 
@@ -34,9 +34,8 @@ export const ContenedorDeLogo = styled.div`
 `;
 
 export const Titulo = styled.h1`
-	font-family: 'Arial';
+	font-family: 'Kallisto';
 	font-style: normal;
-	font-weight: 700;
 	display: flex;
 	align-items: center;
 

@@ -5,3 +5,7 @@ export * from './BotonWallet';
 export * from './BotonSalir';
 export * from './BotonMenuTlf';
 export * from './BotonX';
+export * from './BotonIrAPagar';
+export * from './BotonVerDetalles';
+export * from './BotonAbajo';
+export * from './BotonArriba';

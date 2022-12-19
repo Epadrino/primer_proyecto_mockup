@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { BotonDeX } from './StyledBotones';
 
 interface Props {
-	onClick: any;
+	onClick: () => void;
 }
 
 export const BotonX: FC<Props> = ({ onClick }) => {

@@ -6,12 +6,13 @@ declare module 'styled-components' {
 			primary: string;
 			secondary: string;
 			tertiary: string;
-			header: string;
 		};
 		backgrounds: {
 			primary: string;
 			secondary: string;
 			tertiary: string;
+			producs: string;
+			header: string;
 		};
 	}
 }

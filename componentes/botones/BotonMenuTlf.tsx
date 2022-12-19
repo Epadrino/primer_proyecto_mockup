@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { BotonDeMenuTlf } from './StyledBotones';
 
 interface Props {
-	onClick: any;
+	onClick: () => void;
 }
 export const BotonMenuTlf: FC<Props> = ({ onClick }) => {
 	return (

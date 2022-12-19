@@ -1,24 +1,54 @@
+import {
+	BotonAbajo,
+	BotonArriba,
+	BotonIrAPagar,
+	BotonVerDetalles,
+} from '../../componentes/botones';
 import { LayoutDentro } from '../../componentes/layaouts';
-import { Contenedor, ContenedorDer, ContenedorIzq } from './StyledPlanesV';
+import {
+	Contenedor,
+	ContenedorDeBotones,
+	ContenedorDeFlecha,
+	ContenedorDeMuestra,
+	ContenedorDeProductos,
+	ContenedorDer,
+	ContenedorIzq,
+	Parrafo,
+	Productos,
+	Titulo,
+} from './StyledPlanesV';
 
 export default function PlanesV() {
 	return (
 		<LayoutDentro title='PlanesV'>
 			<Contenedor>
 				<ContenedorIzq>
-					<h1>NOMBRE TARJETA</h1>
-					<h1>200 USD</h1>
-					<p>
+					<Titulo>NOMBRE TARJETA</Titulo>
+					<Titulo>200 USD</Titulo>
+					<Parrafo>
 						"Lorem ipsum dolor sit amet, consectetur adipiscing
 						elit, sed do eiusmod tempor incididunt ut labore et
 						dolore magna aliqua.”
-					</p>
-					<div>
-						<button>Ir a pagar</button>
-						<button>Ver detalles</button>
-					</div>
+					</Parrafo>
+					<ContenedorDeBotones>
+						<BotonIrAPagar />
+						<BotonVerDetalles />
+					</ContenedorDeBotones>
 				</ContenedorIzq>
-				<ContenedorDer></ContenedorDer>
+				<ContenedorDer>
+					<ContenedorDeMuestra>producto</ContenedorDeMuestra>
+					<ContenedorDeProductos>
+						<ContenedorDeFlecha>
+							<BotonArriba />
+						</ContenedorDeFlecha>
+						<Productos>productos</Productos>
+						<Productos>productos</Productos>
+						<Productos>productos</Productos>
+						<ContenedorDeFlecha>
+							<BotonAbajo />
+						</ContenedorDeFlecha>
+					</ContenedorDeProductos>
+				</ContenedorDer>
 			</Contenedor>
 		</LayoutDentro>
 	);

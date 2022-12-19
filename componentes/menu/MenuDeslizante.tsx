@@ -15,10 +15,6 @@ export const MenuDeslizante = () => {
 	return (
 		<ContenedorMenuTlf>
 			{estado ? (
-				<ContenedorDeBoton>
-					<BotonMenuTlf onClick={mostrarOcultar} />
-				</ContenedorDeBoton>
-			) : (
 				<MenuTelefono>
 					<EstiloMenu>
 						<ContenedorBotonX>
@@ -27,6 +23,10 @@ export const MenuDeslizante = () => {
 						<Menu />
 					</EstiloMenu>
 				</MenuTelefono>
+			) : (
+				<ContenedorDeBoton>
+					<BotonMenuTlf onClick={mostrarOcultar} />
+				</ContenedorDeBoton>
 			)}
 		</ContenedorMenuTlf>
 	);
