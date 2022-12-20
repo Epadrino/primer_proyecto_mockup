@@ -6,8 +6,6 @@ import { device } from '../../utils/devices';
 const BotonDeMetaMask = styled.button`
 	display: flex;
 	align-items: center;
-	font-family: 'kallisto';
-	font-weight: 700;
 
 	background: ${(props) => props.theme.backgrounds.tertiary};
 	color: ${(props) => props.theme.colors.primary};

@@ -11,3 +11,5 @@ export * from './BotonArriba';
 export * from './BotonWallet';
 export * from './BotonIzq';
 export * from './BotonDer';
+export * from './BotonUsdt';
+export * from './BotonBusd';
