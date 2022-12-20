@@ -3,8 +3,8 @@ import {
 	BotonIrAPagar,
 	BotonIzq,
 	BotonVerDetalles,
-} from '../../componentes/botones';
-import { LayoutDentro } from '../../componentes/layaouts';
+} from '../componentes/botones';
+import { LayoutDentro } from '../componentes/layaouts';
 import {
 	Contenedor,
 	ContenedorDeBotones,
@@ -15,7 +15,7 @@ import {
 	Productos,
 	TextoDeTarjetas,
 	Titulo,
-} from './StyledPlanesV2';
+} from '../styles/planesV2/StyledPlanesV2';
 
 export default function PlanesV2() {
 	return (

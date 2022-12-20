@@ -3,8 +3,8 @@ import {
 	BotonIrAPagar,
 	BotonUsdt,
 	BotonVerDetalles,
-} from '../../componentes/botones';
-import { LayoutDentro } from '../../componentes/layaouts';
+} from '../componentes/botones';
+import { LayoutDentro } from '../componentes/layaouts';
 import {
 	Contenedor,
 	ContenedorDeBotones,
@@ -15,7 +15,7 @@ import {
 	Parrafo,
 	TituloDos,
 	TituloUno,
-} from './StyledPagar';
+} from '../styles/pagar/StyledPagar';
 
 export default function Pagar() {
 	return (

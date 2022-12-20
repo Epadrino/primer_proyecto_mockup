@@ -1,7 +1,7 @@
-import { BotonContinuar } from '../../componentes/botones';
-import { InputCorreo, InputUsuario } from '../../componentes/inputs';
-import { LayoutUsuario } from '../../componentes/layaouts';
-import { useEstado } from '../../hooks';
+import { BotonContinuar } from '../componentes/botones';
+import { InputCorreo, InputUsuario } from '../componentes/inputs';
+import { LayoutUsuario } from '../componentes/layaouts';
+import { useEstado } from '../hooks';
 
 import {
 	BotonDeLeerMas,
@@ -13,7 +13,7 @@ import {
 	ContenedorMensajeTres,
 	MensajeTres,
 	ContenedorDeBoton,
-} from './StyledUsuario';
+} from '../styles/usuario/StyledUsuario';
 
 export default function Usuario() {
 	const { estado, mostrarOcultar } = useEstado(false);
