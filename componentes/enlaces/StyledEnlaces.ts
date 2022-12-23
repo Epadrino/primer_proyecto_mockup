@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Enlaces = styled.a`
-	font-family: 'Kallisto';
+	width: 100%;
+	font-family: ${(props) => props.theme.fonts.primary};
 	font-size: 20px;
 	font-weight: 700;
 	text-align: left;

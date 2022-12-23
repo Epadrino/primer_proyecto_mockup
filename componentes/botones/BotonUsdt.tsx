@@ -24,7 +24,7 @@ const BotonDeWallet = styled.button`
 		font-size: 12px;
 		line-height: 14px;
 
-		font-family: 'Kallisto';
+		font-family: ${(props) => props.theme.fonts.primary};
 		font-weight: 700;
 		font-size: 15px;
 	}
@@ -33,7 +33,7 @@ const BotonDeWallet = styled.button`
 		height: 51px;
 		font-size: 24px;
 
-		font-family: 'Arial';
+		font-family: ${(props) => props.theme.fonts.primary};
 		font-size: 20px;
 		text-align: center;
 		padding: 0px;

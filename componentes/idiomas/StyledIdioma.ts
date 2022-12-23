@@ -14,7 +14,7 @@ export const IdiomaActivo = styled.h2`
 	justify-content: center;
 
 	color: ${(props) => props.theme.colors.primary};
-	font-family: 'Arial';
+	font-family: ${(props) => props.theme.fonts.primary};
 	font-weight: 700;
 	text-align: center;
 	letter-spacing: 0px;

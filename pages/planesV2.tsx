@@ -10,6 +10,7 @@ import {
 	ContenedorDeBotones,
 	ContenedorDeFlecha,
 	ContenedorDeProductos,
+	ContenedorDer,
 	ContenedorDeTextos,
 	ContenedorIzq,
 	Productos,
@@ -24,21 +25,31 @@ export default function PlanesV2() {
 				<ContenedorIzq>
 					<Titulo>Selecciona tu paquete</Titulo>
 				</ContenedorIzq>
-				<ContenedorDeProductos>
-					<ContenedorDeFlecha>
-						<BotonIzq />
-					</ContenedorDeFlecha>
-					<Productos>
-						<Titulo>NOMBRE TARJETA</Titulo>
-						<Titulo>200 USD</Titulo>
-					</Productos>
-					<ContenedorDeFlecha>
-						<BotonDer />
-					</ContenedorDeFlecha>
-				</ContenedorDeProductos>
+				<ContenedorDer>
+					<ContenedorDeProductos>
+						<ContenedorDeFlecha>
+							<BotonIzq />
+						</ContenedorDeFlecha>
+						<Productos>
+							<TextoDeTarjetas>NOMBRE TARJETA</TextoDeTarjetas>
+							<TextoDeTarjetas>200 USD</TextoDeTarjetas>
+						</Productos>
+						<Productos>
+							<TextoDeTarjetas>NOMBRE TARJETA</TextoDeTarjetas>
+							<TextoDeTarjetas>200 USD</TextoDeTarjetas>
+						</Productos>
+						<Productos>
+							<TextoDeTarjetas>NOMBRE TARJETA</TextoDeTarjetas>
+							<TextoDeTarjetas>200 USD</TextoDeTarjetas>
+						</Productos>
+						<ContenedorDeFlecha>
+							<BotonDer />
+						</ContenedorDeFlecha>
+					</ContenedorDeProductos>
+				</ContenedorDer>
 				<ContenedorDeTextos>
-					<TextoDeTarjetas>NOMBRE TARJETA</TextoDeTarjetas>
-					<TextoDeTarjetas>200 USD</TextoDeTarjetas>
+					<Titulo>NOMBRE TARJETA</Titulo>
+					<Titulo>200 USD</Titulo>
 				</ContenedorDeTextos>
 				<ContenedorDeBotones>
 					<BotonIrAPagar />

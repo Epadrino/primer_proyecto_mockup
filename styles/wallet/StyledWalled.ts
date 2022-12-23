@@ -5,7 +5,7 @@ export const Contenedor = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: 400px;
+	height: 73.84vh;
 
 	@media ${device.mobileXS} {
 		margin-bottom: 110;
@@ -14,13 +14,22 @@ export const Contenedor = styled.div`
 		margin-bottom: 80;
 	}
 `;
-
+export const ContenedorUno = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@media ${device.mobileXS} {
+	}
+	@media ${device.tablet} {
+		padding-top: 0px;
+	}
+`;
 export const TituloWalled = styled.h1`
 	display: flex;
 	justify-content: center;
 	text-align: center;
 
-	font-family: 'Abel';
+	font-family: ${(props) => props.theme.fonts.primary};
 	color: ${(props) => props.theme.colors.primary};
 
 	@media ${device.mobileXS} {

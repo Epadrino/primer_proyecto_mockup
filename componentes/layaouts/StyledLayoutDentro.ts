@@ -7,111 +7,134 @@ export const ContenedorLayout = styled.div`
 `;
 
 export const Cabezera = styled.div`
-	display: flex;
-	justify-content: space-between;
+	display: grid;
 	width: 100%;
+	height: 14.64vh;
+	align-items: center;
 
 	@media ${device.mobileXS} {
-		align-items: flex-end;
-		height: 80px;
-		margin-bottom: 20px;
-
+		grid-template-columns: 7vw auto auto 7vw;
 		background: ${(props) => props.theme.backgrounds.primary};
 	}
 	@media ${device.tablet} {
-		height: 150px;
-		align-items: center;
-		margin-bottom: 0px;
-
+		grid-template-columns: 6vw auto auto 5vw;
+		min-height: 80px;
 		background: ${(props) => props.theme.backgrounds.header};
 	}
 `;
 
-export const ContenedorDeLogo = styled.div`
+export const Cuerpo = styled.div`
 	display: flex;
+	justify-content: center;
 	align-items: center;
+	width: 100%;
+
 	@media ${device.mobileXS} {
-		margin-left: 25px;
-		gap: 7px;
+		grid-template-columns: 7vw auto auto 7vw;
+		height: 91.36vh;
+		background: ${(props) => props.theme.backgrounds.primary};
 	}
 	@media ${device.tablet} {
-		margin-left: 88px;
-		gap: 17px;
+		grid-template-columns: 6vw auto auto 5vw;
+		height: 70.91vh;
+		min-height: 80px;
+		background: ${(props) => props.theme.backgrounds.primary};
+	}
+`;
+export const ContenedorDeLogo = styled.div`
+	display: flex;
+	width: 100%;
+	align-items: center;
+	@media ${device.mobileXS} {
+		grid-column: 2;
+	}
+	@media ${device.tablet} {
+		grid-column: 2;
 	}
 `;
 
 export const Titulo = styled.h1`
-	font-family: 'Kallisto';
-	font-style: normal;
 	display: flex;
 	align-items: center;
+	width: 100%;
 
+	font-style: normal;
+	font-family: ${(props) => props.theme.fonts.primary};
 	color: ${(props) => props.theme.colors.primary};
 
 	@media ${device.mobileXS} {
-		font-size: 13px;
+		font-size: 15px;
 		line-height: 15px;
+		font-weight: bold;
+		margin-left: 1rem;
 	}
 	@media ${device.tablet} {
 		font-size: 25px;
 		line-height: 29px;
+		font-weight: normal;
+		margin-left: 1rem;
 	}
 `;
 export const ContenedorDeMenu = styled.div`
+	display: flex;
 	@media ${device.mobileXS} {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		justify-content: flex-end;
+		grid-column: 3;
 	}
 	@media ${device.tablet} {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		justify-content: flex-end;
+		grid-column: 3;
 	}
 `;
 export const ContenedorMenuEsc = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 30px;
-
 	@media ${device.mobileXS} {
 		display: none;
 	}
 	@media ${device.tablet} {
-		display: contents;
 		display: flex;
 	}
 `;
 
 export const PieDePagina = styled.div`
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-
 	width: 100%;
-	height: 180px;
+	height: 14.45vh;
+	background: ${(props) => props.theme.backgrounds.primary};
+
 	@media ${device.mobileXS} {
 		display: none;
 	}
 	@media ${device.tablet} {
-		display: contents;
-		display: flex;
+		display: grid;
+		grid-template-columns: 8.95vw 78px 3.47vw 300px auto 200px 8.95vw;
 	}
 `;
 
-export const ContenedorIzq = styled.div`
+export const Contenedor1 = styled.div`
 	display: flex;
-	margin-left: 8%;
+	align-items: center;
+	grid-column: 2;
+`;
+
+export const Contenedor2 = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	grid-column: 4;
+`;
+
+export const Contenedor3 = styled.div`
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-direction: column;
+	grid-column: 6;
 `;
 
 export const ContenedorTextoUnoYDos = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-
-	width: 450px;
-	margin-left: 8%;
 `;
 
 export const ContenedorTextosUno = styled.div`
@@ -120,6 +143,7 @@ export const ContenedorTextosUno = styled.div`
 	justify-content: space-evenly;
 	align-items: center;
 `;
+
 export const ContenedorTextosDos = styled.div`
 	display: flex;
 	flex-direction: row;
@@ -133,26 +157,17 @@ export const Separador = styled.hr`
 	margin: 6px;
 `;
 
-export const ContenedorDer = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-	margin-right: 8%;
-`;
-
 export const TextoRedes = styled.h2`
-	font-family: 'Kallisto';
+	font-family: ${(props) => props.theme.fonts.primary};
 	font-style: normal;
-	font-weight: 500;
 	font-size: 15px;
 	line-height: 18px;
+	text-align: center;
 `;
 
 export const ContenedorRedesSociales = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 12%;
+	gap: 10px;
 `;

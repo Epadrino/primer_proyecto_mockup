@@ -14,5 +14,9 @@ declare module 'styled-components' {
 			producs: string;
 			header: string;
 		};
+		fonts: {
+			primary: string;
+			secondary: string;
+		};
 	}
 }

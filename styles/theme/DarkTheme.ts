@@ -13,6 +13,10 @@ const DarkTheme: DefaultTheme = {
 		producs: '#1E1E1E',
 		header: '#131313',
 	},
+	fonts: {
+		primary: 'Arial',
+		secondary: '',
+	},
 };
 
 export { DarkTheme };

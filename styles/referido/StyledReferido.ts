@@ -1,17 +1,45 @@
 import styled from 'styled-components';
 import { device } from '../../utils/devices';
 
-export const Contenedor = styled.div`
+export const ContenedorCuerpo = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+
+	@media ${device.mobileXS} {
+	}
+	@media ${device.tablet} {
+	}
+`;
+
+export const ContenedorUno = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	row-gap: 20px;
+	height: 100%;
 
 	@media ${device.mobileXS} {
-		margin-top: 52px;
-		margin-bottom: 180px;
 	}
 	@media ${device.tablet} {
+	}
+`;
+export const ContenedorDos = styled.div`
+	display: flex;
+	flex-direction: column;
+
+	height: 100%;
+
+	@media ${device.mobileXS} {
+		row-gap: 20px;
+		justify-content: start;
+	}
+	@media ${device.tablet} {
+		row-gap: 45px;
+		justify-content: center;
+		padding-bottom: 70px;
 	}
 `;
 

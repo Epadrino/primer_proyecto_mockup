@@ -13,6 +13,7 @@ export const ContenedorBotonX = styled.div`
 	}
 `;
 export const ContenedorDeEnlaces = styled.div`
+	white-space: nowrap;
 	@media ${device.mobileXS} {
 		display: flex;
 		flex-direction: column;
@@ -23,8 +24,8 @@ export const ContenedorDeEnlaces = styled.div`
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		gap: 58px;
-		width: 270px;
+		gap: 2rem;
+		width: 100%;
 	}
 `;
 
@@ -40,8 +41,7 @@ export const Separador = styled.hr`
 		width: 0px;
 		height: 53px;
 		color: #424242;
-		margin-top: 0px;
-		margin-bottom: 0px;
+		margin: 0px 2rem;
 	}
 `;
 
@@ -51,12 +51,11 @@ export const ContenedorDeBoton = styled.div`
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 18px;
-		margin-right: 0%;
 	}
 	@media ${device.tablet} {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		margin-right: 5%;
+		width: 100%;
 	}
 `;

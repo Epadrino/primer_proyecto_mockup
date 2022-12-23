@@ -2,11 +2,11 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: 'kallisto';
+    font-family: 'arial';
     src: url('/fonts/Kallisto-Thin.otf');
   }
     @font-face {
-    font-family: 'abel';
+    font-family: ${(props) => props.theme.fonts.primary};
     src: url('/fonts/Abel-Regular.ttf');
     }
   html,

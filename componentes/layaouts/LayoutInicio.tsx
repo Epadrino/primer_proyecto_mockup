@@ -1,13 +1,13 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import { FC, PropsWithChildren } from 'react';
 import { Idioma } from '../idiomas';
 import {
-	Contenedor,
+	Cabecera,
 	ContenedorDeTexto,
 	ContenedorIdioma,
-	ImagenEscritorio,
-	ImagenTlf,
+	Cuerpo,
+	Espaciador,
+	PieDePagina,
 	TextodeAbajo,
 } from './StyledLayouts';
 
@@ -21,7 +21,7 @@ export const LayoutInicio: FC<PropsWithChildren<Props>> = ({
 	description,
 }) => {
 	return (
-		<Contenedor>
+		<>
 			<Head>
 				<title>{title || 'Logo Mockup'}</title>
 				<meta
@@ -33,34 +33,20 @@ export const LayoutInicio: FC<PropsWithChildren<Props>> = ({
 				/>
 				<link rel='ico' href='/images/logo/logo_mockup.png' />
 			</Head>
-			<ContenedorIdioma>
-				<Idioma />
-			</ContenedorIdioma>
-			<>
-				<ImagenTlf>
-					<Image
-						src='/images/logo/logo_mockup.png'
-						alt='Cargando Logo'
-						width={159}
-						height={161}
-					/>
-				</ImagenTlf>
-
-				<ImagenEscritorio>
-					<Image
-						src='/images/logo/logo_mockup.png'
-						alt='Cargando Logo'
-						width={348}
-						height={351}
-					/>
-				</ImagenEscritorio>
-			</>
-			{children}
-			<ContenedorDeTexto>
-				<TextodeAbajo>
-					Vive la mejor experiencia y obtén los mejores resulados.
-				</TextodeAbajo>
-			</ContenedorDeTexto>
-		</Contenedor>
+			<Cabecera>
+				<ContenedorIdioma>
+					<Idioma />
+					<Espaciador />
+				</ContenedorIdioma>
+			</Cabecera>
+			<Cuerpo>{children}</Cuerpo>
+			<PieDePagina>
+				<ContenedorDeTexto>
+					<TextodeAbajo>
+						Vive la mejor experiencia y obtén los mejores resulados.
+					</TextodeAbajo>
+				</ContenedorDeTexto>
+			</PieDePagina>
+		</>
 	);
 };

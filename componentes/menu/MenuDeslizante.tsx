@@ -4,7 +4,6 @@ import { Menu } from './Menu';
 import { ContenedorBotonX } from './StyledMenu';
 import {
 	ContenedorMenuTlf,
-	ContenedorDeBoton,
 	MenuTelefono,
 	EstiloMenu,
 } from './StyledMenuDeslizante';
@@ -24,9 +23,7 @@ export const MenuDeslizante = () => {
 					</EstiloMenu>
 				</MenuTelefono>
 			) : (
-				<ContenedorDeBoton>
-					<BotonMenuTlf onClick={mostrarOcultar} />
-				</ContenedorDeBoton>
+				<BotonMenuTlf onClick={mostrarOcultar} />
 			)}
 		</ContenedorMenuTlf>
 	);

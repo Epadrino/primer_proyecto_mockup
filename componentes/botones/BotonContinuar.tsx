@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { device } from '../../utils/devices';
 
 const BotonDeContinuar = styled.button`
-	font-family: 'kallisto';
+	font-family: ${(props) => props.theme.fonts.primary};
 	font-weight: 700;
 	background: transparent;
 	border: 2px solid ${(props) => props.theme.backgrounds.secondary};

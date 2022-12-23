@@ -19,14 +19,16 @@ import {
 	ContenedorRedesSociales,
 	PieDePagina,
 	Titulo,
-	ContenedorIzq,
-	ContenedorDer,
 	ContenedorTextosUno,
 	ContenedorTextosDos,
 	Separador,
 	ContenedorTextoUnoYDos,
 	TextoRedes,
 	ContenedorDeMenu,
+	Contenedor3,
+	Contenedor1,
+	Contenedor2,
+	Cuerpo,
 } from './StyledLayoutDentro';
 import { ImagenEscritorio, ImagenTlf } from './StyledLayouts';
 
@@ -80,15 +82,17 @@ export const LayoutDentro: FC<PropsWithChildren<Props>> = ({
 					<MenuDeslizante />
 				</ContenedorDeMenu>
 			</Cabezera>
-			{children}
+			<Cuerpo>{children}</Cuerpo>
 			<PieDePagina>
-				<ContenedorIzq>
+				<Contenedor1>
 					<Image
 						src='/images/logo/logo_mockup.png'
 						alt='Cargando Logo'
 						width={78}
 						height={78}
 					/>
+				</Contenedor1>
+				<Contenedor2>
 					<ContenedorTextoUnoYDos>
 						<ContenedorTextosUno>
 							<EnlacePieDePagina href='' text='Compañía' />
@@ -107,8 +111,8 @@ export const LayoutDentro: FC<PropsWithChildren<Props>> = ({
 							/>
 						</ContenedorTextosDos>
 					</ContenedorTextoUnoYDos>
-				</ContenedorIzq>
-				<ContenedorDer>
+				</Contenedor2>
+				<Contenedor3>
 					<TextoRedes>Únete a la comunidad</TextoRedes>
 					<ContenedorRedesSociales>
 						<RedSocialDiscord href='' />
@@ -117,7 +121,7 @@ export const LayoutDentro: FC<PropsWithChildren<Props>> = ({
 						<RedSocialInstagram href='' />
 						<RedSocialTwitter href='' />
 					</ContenedorRedesSociales>
-				</ContenedorDer>
+				</Contenedor3>
 			</PieDePagina>
 		</ContenedorLayout>
 	);

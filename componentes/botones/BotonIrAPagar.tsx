@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { device } from '../../utils/devices';
 
 const BotonDeIrAPagar = styled.button`
-	font-family: 'kallisto';
+	font-family: ${(props) => props.theme.fonts.primary};
 	font-weight: 700;
 	background: transparent;
 	color: ${(props) => props.theme.colors.secondary};

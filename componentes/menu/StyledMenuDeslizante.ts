@@ -15,10 +15,6 @@ export const ContenedorMenuTlf = styled.div`
 	}
 `;
 
-export const ContenedorDeBoton = styled.div`
-	padding-right: 20px;
-`;
-
 export const MenuTelefono = styled.div`
 	position: absolute;
 	top: 0;

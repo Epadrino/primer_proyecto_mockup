@@ -17,12 +17,8 @@ export const ContenedordeInputUsuario = styled.div`
 	position: relative;
 
 	@media ${device.mobileXS} {
-		margin-top: 25px;
-		margin-bottom: 17px;
 	}
 	@media ${device.tablet} {
-		margin-top: 32px;
-		margin-bottom: 23px;
 	}
 `;
 export const ContenedordeInputCorreo = styled.div`
@@ -33,26 +29,22 @@ export const ContenedordeInputCorreo = styled.div`
 	position: relative;
 
 	@media ${device.mobileXS} {
-		margin-top: 22px;
-		margin-bottom: 17px;
 	}
 	@media ${device.tablet} {
-		margin-top: 23px;
-		margin-bottom: 5px;
 	}
 `;
 
 export const ContenedorInfoIcon = styled.div`
 	@media ${device.mobileXS} {
 		position: absolute;
-		left: 87.5%;
-		top: 41%;
+		left: 85.5%;
+		top: 27%;
 		z-index: 1;
 	}
 	@media ${device.tablet} {
 		position: absolute;
-		left: 90%;
-		top: 47%;
+		left: 88%;
+		top: 23%;
 		z-index: 1;
 	}
 `;
@@ -73,7 +65,7 @@ export const ContenedorIconCheck = styled.div`
 `;
 
 export const InputDeCodigo = styled.input`
-	font-family: 'abel';
+	font-family: ${(props) => props.theme.fonts.primary};
 	font-weight: 400;
 
 	background: rgba(138, 138, 138, 0.5);
@@ -104,7 +96,7 @@ export const InputDeCodigo = styled.input`
 `;
 
 export const InputDeUsuario = styled.input`
-	font-family: 'abel';
+	font-family: ${(props) => props.theme.fonts.primary};
 	font-weight: 400;
 
 	background: rgba(138, 138, 138, 0.5);
@@ -127,7 +119,7 @@ export const InputDeUsuario = styled.input`
 		line-height: 15px;
 	}
 	@media ${device.tablet} {
-		height: 64px;
+		height: 6.5vh;
 		width: 517px;
 		font-size: 20px;
 		line-height: 24px;
@@ -135,7 +127,7 @@ export const InputDeUsuario = styled.input`
 `;
 
 export const InputDeCorreo = styled.input`
-	font-family: 'abel';
+	font-family: ${(props) => props.theme.fonts.primary};
 	font-weight: 400;
 
 	background: rgba(138, 138, 138, 0.5);
@@ -158,7 +150,7 @@ export const InputDeCorreo = styled.input`
 		line-height: 15px;
 	}
 	@media ${device.tablet} {
-		height: 64px;
+		height: 6.5vh;
 		width: 517px;
 		font-size: 20px;
 		line-height: 24px;

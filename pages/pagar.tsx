@@ -19,7 +19,7 @@ import {
 
 export default function Pagar() {
 	return (
-		<LayoutDentro title='PlanesV'>
+		<LayoutDentro title='Pagar'>
 			<Contenedor>
 				<ContenedorDeMuestra>producto</ContenedorDeMuestra>
 				<TituloUno>¡Genial!</TituloUno>

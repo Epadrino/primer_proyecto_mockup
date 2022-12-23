@@ -53,14 +53,14 @@ const Texto = styled.h1`
 	color: ${(props) => props.theme.colors.primary};
 
 	@media ${device.mobileXS} {
-		font-family: 'Abel';
+		font-family: ${(props) => props.theme.fonts.primary};
 		font-weight: 400;
 		font-size: 12px;
 		text-align: left;
 		padding: 10px;
 	}
 	@media ${device.tablet} {
-		font-family: 'Kallisto';
+		font-family: ${(props) => props.theme.fonts.primary};
 		font-weight: 700;
 		font-size: 24px;
 		text-align: center;

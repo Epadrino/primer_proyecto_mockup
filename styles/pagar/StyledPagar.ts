@@ -2,24 +2,23 @@ import styled from 'styled-components';
 import { device } from '../../utils/devices';
 
 export const Contenedor = styled.div`
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	align-content: none;
 	width: 100%;
 
 	@media ${device.mobileXS} {
-		display: grid;
-		justify-items: center;
-		align-items: center;
-		justify-content: center;
-		align-content: none;
-		height: 800px;
+		overflow: hidden;
+		padding: 0px 0px;
+		column-gap: 0%;
 	}
 	@media ${device.tablet} {
-		display: grid;
-		justify-items: center;
-		align-items: center;
-		justify-content: center;
-		align-content: center;
-		mind-height: 690px;
+		overflow: visible;
 		column-gap: 4%;
+		padding: 0 20px;
+		row-gap: 20px;
 	}
 `;
 
@@ -30,8 +29,9 @@ export const TituloUno = styled.div`
 
 	@media ${device.mobileXS} {
 		grid-row: 1;
+		grid-column: 1;
 
-		font-family: 'Kallisto';
+		font-family: ${(props) => props.theme.fonts.primary};
 		font-style: normal;
 		font-weight: 700;
 		font-size: 20px;
@@ -41,7 +41,7 @@ export const TituloUno = styled.div`
 		grid-row: 1;
 		grid-column: 2;
 
-		font-family: 'Kallisto';
+		font-family: ${(props) => props.theme.fonts.primary};
 		font-weight: 700;
 		font-size: 32px;
 		text-align: left;
@@ -55,12 +55,13 @@ export const TituloDos = styled.div`
 
 	@media ${device.mobileXS} {
 		grid-row: 5;
+		grid-column: 1;
 
 		justify-content: center;
 		align-items: center;
 		height: 50px;
 
-		font-family: 'Kallisto';
+		font-family: ${(props) => props.theme.fonts.primary};
 		font-style: normal;
 		font-weight: 700;
 		font-size: 15px;
@@ -74,11 +75,9 @@ export const TituloDos = styled.div`
 		justify-content: flex-start;
 		align-items: center;
 
-		margin-left: 0;
-		margin-top: 11px;
-		margin-bottom: 11px;
+		paddin: 11px 0;
 
-		font-family: 'Kallisto';
+		font-family: ${(props) => props.theme.fonts.primary};
 		font-weight: 700;
 		font-size: 32px;
 	}
@@ -93,10 +92,11 @@ export const Parrafo = styled.p`
 
 	@media ${device.mobileXS} {
 		grid-row: 2;
+		grid-column: 1;
 		/* max-width: 250px; */
 		max-width: 250px;
 
-		font-family: 'Arial';
+		font-family: ${(props) => props.theme.fonts.primary};
 		font-style: normal;
 		font-weight: 700;
 		font-size: 12px;
@@ -108,7 +108,18 @@ export const Parrafo = styled.p`
 		grid-column: 2;
 		max-width: 550px;
 
-		font-family: 'Kallisto';
+		font-family: ${(props) => props.theme.fonts.primary};
+		font-style: normal;
+		font-weight: 500;
+		font-size: 15px;
+		text-align: left;
+	}
+	@media ${device.laptop} {
+		grid-row: 2;
+		grid-column: 2;
+		max-width: 550px;
+
+		font-family: ${(props) => props.theme.fonts.primary};
 		font-style: normal;
 		font-weight: 500;
 		font-size: 20px;
@@ -119,13 +130,15 @@ export const Parrafo = styled.p`
 export const ContenedorItem = styled.ul`
 	display: flex;
 	flex-direction: column;
-	width: 100%;
+	width: cal(100%-1.2rem);
 	gap: 20px;
 	padding-left: 1.2rem;
 	list-style-type: circle;
+	margin: 0;
 
 	@media ${device.mobileXS} {
 		grid-row: 4;
+		grid-column: 1;
 		justify-content: center;
 		max-width: 244px;
 		height: 100%;
@@ -144,7 +157,7 @@ export const Item = styled.li`
 	width: 100%;
 	margin: 0px;
 
-	font-family: 'Kallisto';
+	font-family: ${(props) => props.theme.fonts.primary};
 	font-style: normal;
 	font-weight: 500;
 	color: ${(props) => props.theme.colors.primary};
@@ -153,6 +166,9 @@ export const Item = styled.li`
 		font-size: 12px;
 	}
 	@media ${device.tablet} {
+		font-size: 15px;
+	}
+	@media ${device.laptop} {
 		font-size: 20px;
 	}
 `;
@@ -167,7 +183,7 @@ export const ContenedorDeBotones = styled.div`
 		width: 100%;
 		height: 50px;
 		gap: 10px;
-		padding-bottom: 20px;
+		margin-bottom: 10px;
 	}
 	@media ${device.tablet} {
 		grid-row: 5;
@@ -178,7 +194,7 @@ export const ContenedorDeBotones = styled.div`
 		width: 100%;
 		height: 60px;
 		gap: 20px;
-		padding-bottom: 0px;
+		margin-bottom: 0px;
 	}
 `;
 
@@ -186,6 +202,7 @@ export const ContenedorDeBotones2 = styled.div`
 	display: flex;
 	@media ${device.mobileXS} {
 		grid-row: 7;
+		grid-column: 1;
 
 		justify-content: center;
 		align-items: center;
@@ -199,6 +216,22 @@ export const ContenedorDeBotones2 = styled.div`
 		background: ${(props) => props.theme.backgrounds.header};
 	}
 	@media ${device.tablet} {
+		grid-row: 6;
+		grid-column: 2;
+
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		width: 100%;
+		height: 70px;
+		gap: 10px;
+
+		border-radius: 0px;
+		background: none;
+	}
+	@media ${device.laptop} {
 		grid-row: 6;
 		grid-column: 2;
 
@@ -226,14 +259,27 @@ export const ContenedorDeMuestra = styled.div`
 		border: 2px solid ${(props) => props.theme.backgrounds.secondary};
 	}
 
+	position: relative;
+	width: 514px;
+	::after {
+		content: '';
+		display: block;
+		margin-bottom: 100%;
+	}
 	@media ${device.mobileXS} {
-		height: 244px;
-		width: 244px;
+		max-height: 244px;
+		max-width: 244px;
 	}
 	@media ${device.tablet} {
 		grid-row: 1 / spam 6;
 		grid-column: 1;
-		width: 514px;
-		height: 513px;
+		max-width: 414px;
+		max-height: 413px;
+	}
+	@media ${device.laptop} {
+		grid-row: 1 / spam 6;
+		grid-column: 1;
+		max-width: 514px;
+		max-height: 513px;
 	}
 `;
