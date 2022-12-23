@@ -13,3 +13,4 @@ export * from './BotonIzq';
 export * from './BotonDer';
 export * from './BotonUsdt';
 export * from './BotonBusd';
+export * from './BotonAccion';
