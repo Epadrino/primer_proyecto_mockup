@@ -31,12 +31,10 @@ export const Cuerpo = styled.div`
 
 	@media ${device.mobileXS} {
 		grid-template-columns: 7vw auto auto 7vw;
-		height: 91.36vh;
 		background: ${(props) => props.theme.backgrounds.primary};
 	}
 	@media ${device.tablet} {
 		grid-template-columns: 6vw auto auto 5vw;
-		height: 70.91vh;
 		min-height: 80px;
 		background: ${(props) => props.theme.backgrounds.primary};
 	}

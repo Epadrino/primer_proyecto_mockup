@@ -9,8 +9,10 @@ export const Contenedor = styled.div`
 	height: 70.91vh;
 
 	@media ${device.mobileXS} {
+		height: 91.36vh;
 	}
 	@media ${device.tablet} {
+		height: 70.91vh;
 		gap: 5%;
 	}
 `;

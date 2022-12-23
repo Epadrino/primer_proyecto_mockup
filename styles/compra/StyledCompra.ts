@@ -7,11 +7,13 @@ export const Contenedor = styled.div`
 	column-gap: 2.91vw;
 
 	@media ${device.mobileXS} {
+		height: 91.36vh;
 		align-items: center;
 		justify-content: center;
 		width: 75%;
 	}
 	@media ${device.tablet} {
+		height: 70.91vh;
 		width: 95%;
 		align-items: center;
 		justify-content: center;

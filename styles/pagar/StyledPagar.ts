@@ -10,11 +10,13 @@ export const Contenedor = styled.div`
 	width: 100%;
 
 	@media ${device.mobileXS} {
+		height: 91.36vh;
 		overflow: hidden;
 		padding: 0px 0px;
 		column-gap: 0%;
 	}
 	@media ${device.tablet} {
+		height: 70.91vh;
 		overflow: visible;
 		column-gap: 4%;
 		padding: 0 20px;

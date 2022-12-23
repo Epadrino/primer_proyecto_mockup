@@ -1,4 +1,3 @@
-import React from 'react';
 import { BotonAccion } from '../componentes/botones';
 import { LayoutDentro } from '../componentes/layaouts';
 import {
