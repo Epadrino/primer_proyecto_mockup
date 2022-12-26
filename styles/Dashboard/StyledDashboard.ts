@@ -13,23 +13,25 @@ export const ContenedorReferidos = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 20px;
-	height: 398px;
+
+	@media ${device.mobileXS} {
+		height: 180px;
+	}
+	@media ${device.tablet} {
+		height: 200px;
+	}
+	@media ${device.laptop} {
+		height: 398px;
+	}
 `;
 
 export const ContenedorCodigo = styled.div`
 	position: relative;
-	width: 218px;
-
-	::after {
-		content: '';
-		display: block;
-		padding-bottom: 100%;
-	}
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
 export const CodigoQR = styled.div`
-	position: absolute;
-	top: 0px;
-	right: 0px;
 	z-index: 3;
 	width: 220px;
 
@@ -40,13 +42,23 @@ export const CodigoQR = styled.div`
 	}
 	border-radius: 10px;
 	background: ${(props) => props.theme.backgrounds.header};
-`;
 
+	@media ${device.mobileXS} {
+		max-width: 100px;
+	}
+	@media ${device.tablet} {
+		max-width: 100px;
+	}
+	@media ${device.laptop} {
+		max-width: 220px;
+	}
+`;
+export const ContenedorFondo = styled.div`
+	z-index: 0;
+`;
 export const Fondozul = styled.div`
 	position: absolute;
-	top: 45px;
-	left: 0px;
-	width: 215px;
+	width: 220px;
 	z-index: 2;
 
 	::after {
@@ -56,13 +68,26 @@ export const Fondozul = styled.div`
 	}
 	border-radius: 10px;
 	background: ${(props) => props.theme.backgrounds.secondary};
+	@media ${device.mobileXS} {
+		top: 36px;
+		left: 3px;
+		max-width: 95px;
+	}
+	@media ${device.tablet} {
+		top: 32px;
+		left: 2px;
+		max-width: 95px;
+	}
+	@media ${device.laptop} {
+		top: 36px;
+		left: 2px;
+		max-width: 215px;
+	}
 `;
 export const FondoBlanco = styled.div`
 	position: absolute;
-	top: 35px;
-	left: 0px;
 	z-index: 3;
-	width: 215px;
+	width: 220px;
 
 	::after {
 		content: '';
@@ -71,6 +96,21 @@ export const FondoBlanco = styled.div`
 	}
 	border-radius: 10px;
 	background: ${(props) => props.theme.colors.primary};
+	@media ${device.mobileXS} {
+		max-width: 95px;
+		top: 30px;
+		left: 3px;
+	}
+	@media ${device.tablet} {
+		max-width: 95px;
+		top: 28px;
+		left: 2px;
+	}
+	@media ${device.laptop} {
+		top: 30px;
+		left: 2px;
+		max-width: 215px;
+	}
 `;
 
 export const ContenedorReferidosTexto = styled.div`
@@ -88,19 +128,27 @@ export const TextoTitulo = styled.h1`
 		font-size: 20px;
 	}
 	@media ${device.tablet} {
+		font-size: 25px;
+	}
+	@media ${device.laptop} {
 		font-size: 32px;
 	}
 `;
 export const TextoParrafo = styled.h2`
 	margin: 0;
-	padding: 20px 0px;
 
 	color: ${(props) => props.theme.colors.primary};
 	font-weight: ${(props) => props.theme.fonts.primary};
 	@media ${device.mobileXS} {
+		padding: 10px 0px;
 		font-size: 10px;
 	}
 	@media ${device.tablet} {
+		padding: 15px 0px;
+		font-size: 15px;
+	}
+	@media ${device.laptop} {
+		padding: 20px 0px;
 		font-size: 20px;
 	}
 `;
@@ -121,6 +169,10 @@ export const TextoInput = styled.input`
 		height: 21px;
 	}
 	@media ${device.tablet} {
+		font-size: 20px;
+		height: 30px;
+	}
+	@media ${device.laptop} {
 		font-size: 32px;
 		height: 46px;
 	}
@@ -145,6 +197,12 @@ export const TextoInputBoton = styled.button`
 		border-radius: 1px;
 	}
 	@media ${device.tablet} {
+		width: 81px;
+		font-size: 20px;
+		height: 32px;
+		border-radius: 10px;
+	}
+	@media ${device.laptop} {
 		border-radius: 10px;
 		height: 46px;
 		width: 91px;
@@ -154,21 +212,30 @@ export const TextoInputBoton = styled.button`
 export const ContenedorDatos = styled.div`
 	display: flex;
 	justify-content: center;
-	gap: 20px;
-	padding-bottom: 46px;
 	@media ${device.mobileXS} {
 		flex-direction: column;
+		padding-bottom: 0px;
+		gap: 10px;
 	}
 	@media ${device.tablet} {
+		padding-bottom: 46px;
 		flex-direction: row;
+		gap: 20px;
 	}
 `;
 export const ContenedorDatosDentro = styled.div`
 	width: 100%;
 	height: 100%;
 	display: flex;
-	flex-direction: column;
-	gap: 20px;
+	@media ${device.mobileXS} {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	@media ${device.desktopL} {
+		flex-direction: row;
+		gap: 20px;
+	}
 `;
 
 export const ContenedorDato = styled.div`
@@ -190,17 +257,39 @@ export const ContenedorDato = styled.div`
 
 	@media ${device.mobileXS} {
 		padding: 10px 20px;
-		max-width: 299px;
-		max-height: 63px;
+		max-width: 340px;
+	}
+	@media ${device.mobileS} {
+		padding: 20px 40px;
+		max-width: 210px;
+	}
+	@media ${device.mobileM} {
+		padding: 20px 40px;
+		max-width: 257px;
+	}
+	@media ${device.mobileL} {
+		padding: 20px 40px;
+		max-width: 300px;
 	}
 	@media ${device.tablet} {
-		max-width: 350px;
-		max-height: 63px;
+		padding: 10px 20px;
+		max-width: 300px;
 	}
 	@media ${device.laptop} {
 		padding: 20px 40px;
+		max-width: 370px;
+	}
+	@media ${device.laptopL} {
+		padding: 20px 40px;
+		max-width: 560px;
+	}
+	@media ${device.desktop} {
+		padding: 20px 40px;
 		max-width: 567px;
-		max-height: 125px;
+	}
+	@media ${device.desktopL} {
+		padding: 20px 40px;
+		max-width: 480px;
 	}
 `;
 
@@ -223,6 +312,9 @@ export const TituloDatos = styled.h1`
 		font-size: 14px;
 	}
 	@media ${device.tablet} {
+		font-size: 18px;
+	}
+	@media ${device.laptop} {
 		font-size: 24px;
 	}
 `;
@@ -236,6 +328,9 @@ export const SubTituloDatos = styled.h2`
 		font-size: 14px;
 	}
 	@media ${device.tablet} {
+		font-size: 14px;
+	}
+	@media ${device.laptop} {
 		font-size: 19px;
 	}
 `;
@@ -255,6 +350,9 @@ export const MontoDatos = styled.h1`
 		font-size: 24px;
 	}
 	@media ${device.tablet} {
+		font-size: 28px;
+	}
+	@media ${device.laptop} {
 		font-size: 48px;
 	}
 `;
@@ -264,8 +362,8 @@ export const ContenedorListas = styled.div`
 	gap: 20px;
 `;
 export const ContenedorListaTlf = styled.div`
-	position: relative;
 	display: flex;
+	position: relative;
 	flex-direction: column;
 	width: 100%;
 	height: 100%;
@@ -273,7 +371,6 @@ export const ContenedorListaTlf = styled.div`
 	background: ${(props) => props.theme.backgrounds.header};
 `;
 export const ContenedorListaEscritorio = styled.div`
-	display: flex;
 	flex-direction: column;
 	width: 100%;
 	height: 100%;
@@ -283,7 +380,7 @@ export const ContenedorListaEscritorio = styled.div`
 		display: none;
 	}
 	@media ${device.tablet} {
-		display: block;
+		display: flex;
 	}
 `;
 export const TituloLista = styled.h1`
@@ -328,10 +425,13 @@ export const BotonLista = styled.button`
 `;
 
 export const ContenedorBotonesListas = styled.div`
+	align-items: center;
+	justify-content: center;
 	width: 100%;
-
+	padding: 20px 0;
+	gap: 20px;
 	@media ${device.mobileXS} {
-		display: block;
+		display: flex;
 	}
 	@media ${device.tablet} {
 		display: none;

@@ -7,35 +7,35 @@ export const Contenedor = styled.div`
 	@media ${device.mobileXS} {
 		overflow-x: scroll;
 		::-webkit-scrollbar {
-			height: 13px;
+			height: 5px;
+
 			background-color: ${(props) => props.theme.backgrounds.header};
 		}
 		::-webkit-scrollbar-thumb {
 			background-color: ${(props) => props.theme.backgrounds.secondary};
 			border-radius: 5px;
-			width: 74px;
-			height: 13;
 		}
 		padding-bottom: 0px;
 		margin: 0;
 	}
 	@media ${device.tablet} {
+		overflow: hidden;
 		padding-bottom: 30px;
-		overflow-x: hidden;
 	}
 `;
 
 export const Tabla = styled.table`
 	color: ${(props) => props.theme.colors.primary};
 	font-family: ${(props) => props.theme.fonts.primary};
-	width: 600px;
 	font-weight: 300;
 	text-align: left;
 
 	@media ${device.mobileXS} {
+		width: 600px;
 		font-size: 15px;
 	}
 	@media ${device.tablet} {
+		width: 100%;
 		font-size: 15px;
 	}
 `;

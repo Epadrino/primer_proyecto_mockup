@@ -30,6 +30,7 @@ import {
 	ContenedorBotonesListas,
 	ContenedorListaTlf,
 	ContenedorListaEscritorio,
+	ContenedorFondo,
 } from '../styles/Dashboard/StyledDashboard';
 
 export default function dashboard() {
@@ -38,9 +39,11 @@ export default function dashboard() {
 			<Contenedor>
 				<ContenedorReferidos>
 					<ContenedorCodigo>
-						<FondoBlanco />
-						<Fondozul />
 						<CodigoQR>codigo</CodigoQR>
+						<ContenedorFondo>
+							<FondoBlanco />
+							<Fondozul />
+						</ContenedorFondo>
 					</ContenedorCodigo>
 					<ContenedorReferidosTexto>
 						<TextoTitulo>¡Hola!</TextoTitulo>
