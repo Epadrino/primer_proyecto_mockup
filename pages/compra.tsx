@@ -19,7 +19,7 @@ import {
 
 export default function compra() {
 	return (
-		<LayoutDentro>
+		<LayoutDentro title='Compra'>
 			<Contenedor>
 				<ContenedorProducto>
 					<Producto></Producto>

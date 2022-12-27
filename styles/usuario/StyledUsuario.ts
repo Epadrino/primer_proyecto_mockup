@@ -199,3 +199,26 @@ export const ContenedorDeBoton = styled.div`
 	@media ${device.tablet} {
 	}
 `;
+
+export const Contenedor = styled.div`
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	position: relative;
+`;
+
+export const ContenedorIcon = styled.div`
+	@media ${device.mobileXS} {
+		position: absolute;
+		left: 85.5%;
+		top: 27%;
+		z-index: 1;
+	}
+	@media ${device.tablet} {
+		position: absolute;
+		left: 88%;
+		top: 15%;
+		z-index: 1;
+	}
+`;

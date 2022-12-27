@@ -1,3 +1,1 @@
-export * from './InputCodigo';
-export * from './InputUsuario';
-export * from './InputCorreo';
+export * from './Input';

@@ -1,13 +1,13 @@
 import Image from 'next/image';
-import { ImagenEscritorio, ImagenTlf } from '../layaouts/StyledLayouts';
 import styled from 'styled-components';
 import { device } from '../../utils/devices';
+import { FC } from 'react';
 
-const BotonDeWallet = styled.button`
-	display: flex;
+const Boton = styled.button`
 	align-items: center;
 	justify-content: space-evenly;
 
+	text-align: left;
 	background: transparent;
 	color: ${(props) => props.theme.colors.primary};
 	border-radius: 5px;
@@ -19,6 +19,7 @@ const BotonDeWallet = styled.button`
 	}
 
 	@media ${device.mobileXS} {
+		display: flex;
 		width: 105px;
 		height: 38px;
 		font-size: 12px;
@@ -29,37 +30,28 @@ const BotonDeWallet = styled.button`
 		font-size: 15px;
 	}
 	@media ${device.tablet} {
-		width: 143px;
-		height: 51px;
-		font-size: 24px;
-
-		font-family: ${(props) => props.theme.fonts.primary};
-		font-size: 20px;
-		text-align: center;
-		padding: 0px;
+		display: none;
 	}
 `;
+interface Props {
+	text?: string;
+	src?: string;
+	width?: number;
+	height?: number;
+	onClick?: () => void;
+}
 
-export const BotonUsdt = () => {
+export const BotonMonedaTlf: FC<Props> = ({
+	text,
+	src,
+	width,
+	height,
+	onClick,
+}) => {
 	return (
-		<BotonDeWallet>
-			<ImagenTlf>
-				<Image
-					src='/images/iconos/icon_TETHER.png'
-					alt='Cargando Logo'
-					width={25}
-					height={25}
-				/>
-			</ImagenTlf>
-			<ImagenEscritorio>
-				<Image
-					src='/images/iconos/icon_TETHER.png'
-					alt='Cargando Logo'
-					width={41}
-					height={39}
-				/>
-			</ImagenEscritorio>
-			USDT
-		</BotonDeWallet>
+		<Boton onClick={onClick}>
+			<Image src={src} alt='img' width={width} height={height} />
+			{text}
+		</Boton>
 	);
 };

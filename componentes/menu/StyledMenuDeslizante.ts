@@ -16,6 +16,7 @@ export const ContenedorMenuTlf = styled.div`
 `;
 
 export const MenuTelefono = styled.div`
+	z-index: 100;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -28,7 +29,7 @@ export const EstiloMenu = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	margin-top: 45px;
-	margin-left: 30px;
-	margin-right: 30px;
+	padding-top: 45px;
+	padding-left: 20px;
+	padding-right: 10px;
 `;

@@ -5,7 +5,6 @@ export const Contenedor = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: 73.84vh;
 
 	@media ${device.mobileXS} {
 		height: 91.36vh;
@@ -20,10 +19,11 @@ export const ContenedorUno = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding-top: 0px;
+
 	@media ${device.mobileXS} {
 	}
 	@media ${device.tablet} {
-		padding-top: 0px;
 	}
 `;
 export const TituloWalled = styled.h1`

@@ -23,6 +23,13 @@ export const ContenedorRuta = styled.div`
 	height: 100px;
 	width: 100%;
 `;
+
+export const FondoFlecha = styled.span`
+	background: ${(props) => props.theme.backgrounds.secondary};
+	border-radius: 10px;
+	width: 40px;
+	height: 40px;
+`;
 export const Titulo = styled.div`
 	color: ${(props) => props.theme.colors.primary};
 
@@ -48,6 +55,7 @@ export const BotonLista = styled.div``;
 export const ContenedorListaBoton = styled.div`
 	justify-content: right;
 	display: flex;
+	align-items: center;
 	height: 100px;
 	width: 100%;
 `;

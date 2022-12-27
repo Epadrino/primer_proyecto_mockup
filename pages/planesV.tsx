@@ -1,4 +1,4 @@
-import { BotonIrAPagar, BotonVerDetalles } from '../componentes/botones';
+import { BotonAccion } from '../componentes/botones';
 import { LayoutDentro } from '../componentes/layaouts';
 import { Productos } from '../componentes/productos';
 import {
@@ -26,8 +26,8 @@ export default function PlanesV() {
 					</ContenedorDeTexto>
 				</ContenedorIzq>
 				<ContenedorDeBotones>
-					<BotonIrAPagar />
-					<BotonVerDetalles />
+					<BotonAccion text='Ir a mi Pagar' />
+					<BotonAccion text='Ver detalles' />
 				</ContenedorDeBotones>
 				<Productos />
 			</Contenedor>

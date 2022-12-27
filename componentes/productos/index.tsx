@@ -1,5 +1,5 @@
 import React from 'react';
-import { BotonAbajo, BotonArriba } from '../botones';
+import { BotonImagen } from '../botones';
 import {
 	Contenedor,
 	ContenedorBotonAbajo,
@@ -20,13 +20,21 @@ export const Productos = () => {
 				</ContenedorDeProductos1>
 				<ContenedorDeProductos2>
 					<ContenedorBotonArriba>
-						<BotonArriba />
+						<BotonImagen
+							src='/images/iconos/icon_arriba.png'
+							width={46}
+							height={46}
+						/>
 					</ContenedorBotonArriba>
 					<Producto2 />
 					<Producto2 />
 					<Producto2 />
 					<ContenedorBotonAbajo>
-						<BotonAbajo />
+						<BotonImagen
+							src='/images/iconos/icon_abajo.png'
+							width={46}
+							height={46}
+						/>
 					</ContenedorBotonAbajo>
 				</ContenedorDeProductos2>
 			</ContenedorDeProductos>

@@ -224,9 +224,11 @@ export const ContenedorDatos = styled.div`
 	}
 `;
 export const ContenedorDatosDentro = styled.div`
-	width: 100%;
-	height: 100%;
 	display: flex;
+	align-items: center;
+	position: relative;
+	width: 100%;
+
 	@media ${device.mobileXS} {
 		flex-direction: column;
 		gap: 10px;
@@ -243,53 +245,15 @@ export const ContenedorDato = styled.div`
 	align-items: center;
 	justify-content: space;
 
-	padding: 20px 40px;
 	gap: 20px;
 	border-radius: 10px;
 	background: ${(props) => props.theme.backgrounds.header};
 
-	width: 567px;
+	position: relative;
+	width: 100%;
 	::after {
 		content: '';
-		display: block;
 		padding-bottom: 22%;
-	}
-
-	@media ${device.mobileXS} {
-		padding: 10px 20px;
-		max-width: 340px;
-	}
-	@media ${device.mobileS} {
-		padding: 20px 40px;
-		max-width: 210px;
-	}
-	@media ${device.mobileM} {
-		padding: 20px 40px;
-		max-width: 257px;
-	}
-	@media ${device.mobileL} {
-		padding: 20px 40px;
-		max-width: 300px;
-	}
-	@media ${device.tablet} {
-		padding: 10px 20px;
-		max-width: 300px;
-	}
-	@media ${device.laptop} {
-		padding: 20px 40px;
-		max-width: 370px;
-	}
-	@media ${device.laptopL} {
-		padding: 20px 40px;
-		max-width: 560px;
-	}
-	@media ${device.desktop} {
-		padding: 20px 40px;
-		max-width: 567px;
-	}
-	@media ${device.desktopL} {
-		padding: 20px 40px;
-		max-width: 480px;
 	}
 `;
 
@@ -297,7 +261,7 @@ export const ContenedorTextoDatos = styled.div`
 	display: flex;
 	flex-direction: column;
 	margin: 0;
-	padding: 0px;
+	padding: 0px 20px;
 	width: 50%;
 `;
 

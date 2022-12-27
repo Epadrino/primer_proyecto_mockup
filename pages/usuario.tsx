@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { BotonContinuar } from '../componentes/botones';
-import { InputCorreo, InputUsuario } from '../componentes/inputs';
+import { BotonAccion } from '../componentes/botones';
+import { Input } from '../componentes/inputs';
 import { LayoutUsuario } from '../componentes/layaouts';
 import {
 	ImagenEscritorio,
@@ -9,6 +9,8 @@ import {
 import { useEstado } from '../hooks';
 
 import {
+	Contenedor,
+	ContenedorIcon,
 	ContenedorUno,
 	ContenedorDos,
 	MensajeDos,
@@ -50,7 +52,27 @@ export default function Usuario() {
 				<ContenedorDos>
 					<TituloUsuario>Crea un usuario</TituloUsuario>
 					{/* <Pregunta>¿Tienes dudas?</Pregunta> */}
-					<InputUsuario />
+					<Contenedor>
+						<Input placeholder={'Código de referido'} />
+						<ContenedorIcon>
+							<ImagenTlf>
+								<Image
+									src='/images/iconos/Check.png'
+									alt='Cargando Logo'
+									width={19}
+									height={19}
+								/>
+							</ImagenTlf>
+							<ImagenEscritorio>
+								<Image
+									src='/images/iconos/Check.png'
+									alt='Cargando Logo'
+									width={33.29}
+									height={33.29}
+								/>
+							</ImagenEscritorio>
+						</ContenedorIcon>
+					</Contenedor>
 					{/* <ContenedorMensajeUno>
 						<MensajeUno>
 							Usa solo letras y números. Recuerda que este será el
@@ -66,7 +88,7 @@ export default function Usuario() {
 							</BotonDeLeerMas>
 						</MensajeDos>
 					</ContenedorMensajeUno> */}
-					<InputCorreo />
+					<Input placeholder={'correo'} />
 					<ContenedorMensajeTres>
 						<MensajeTres>
 							Lo usaremos únicamente para enviarte información
@@ -74,7 +96,7 @@ export default function Usuario() {
 						</MensajeTres>
 					</ContenedorMensajeTres>
 					<ContenedorDeBoton>
-						<BotonContinuar />
+						<BotonAccion text='Continuar' />
 					</ContenedorDeBoton>
 				</ContenedorDos>
 			</ContenedorCuerpo>

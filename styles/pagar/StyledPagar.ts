@@ -221,7 +221,7 @@ export const ContenedorDeBotones2 = styled.div`
 		grid-row: 6;
 		grid-column: 2;
 
-		justify-content: center;
+		justify-content: start;
 		align-items: center;
 		flex-direction: row;
 		flex-wrap: wrap;

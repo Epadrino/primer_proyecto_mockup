@@ -14,6 +14,7 @@ export const Cuerpo = styled.div`
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	min-height: 600px;
 
 	@media ${device.mobileXS} {
 		height: 73.84vh;

@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import { ImagenEscritorio, ImagenTlf } from '../layaouts/StyledLayouts';
 import { device } from '../../utils/devices';
+import { FC } from 'react';
 
-const BotonDeMetaMask = styled.button`
-	display: flex;
+const Boton = styled.button`
 	align-items: center;
 	justify-content: space-evenly;
 
@@ -20,16 +19,10 @@ const BotonDeMetaMask = styled.button`
 	}
 
 	@media ${device.mobileXS} {
-		width: 105px;
-		height: 38px;
-		font-size: 12px;
-		line-height: 14px;
-
-		font-family: ${(props) => props.theme.fonts.primary};
-		font-weight: 700;
-		font-size: 15px;
+		display: none;
 	}
 	@media ${device.tablet} {
+		display: flex;
 		width: 143px;
 		height: 51px;
 		font-size: 24px;
@@ -40,27 +33,25 @@ const BotonDeMetaMask = styled.button`
 		padding: 0px;
 	}
 `;
+interface Props {
+	text?: string;
+	src?: string;
+	width?: number;
+	height?: number;
+	onClick?: () => void;
+}
 
-export const BotonBusd = () => {
+export const BotonMonedaEscr: FC<Props> = ({
+	text,
+	src,
+	width,
+	height,
+	onClick,
+}) => {
 	return (
-		<BotonDeMetaMask>
-			<ImagenTlf>
-				<Image
-					src='/images/iconos/icon_BUSD.png'
-					alt='Cargando Logo'
-					width={26}
-					height={26}
-				/>
-			</ImagenTlf>
-			<ImagenEscritorio>
-				<Image
-					src='/images/iconos/icon_BUSD.png'
-					alt='Cargando Logo'
-					width={34}
-					height={34}
-				/>
-			</ImagenEscritorio>
-			BUSD
-		</BotonDeMetaMask>
+		<Boton onClick={onClick}>
+			<Image src={src} alt='img' width={width} height={height} />
+			{text}
+		</Boton>
 	);
 };

@@ -1,5 +1,5 @@
 import { useEstado } from '../../hooks';
-import { BotonMenuTlf, BotonX } from '../botones';
+import { BotonImagen } from '../botones';
 import { Menu } from './Menu';
 import { ContenedorBotonX } from './StyledMenu';
 import {
@@ -17,13 +17,23 @@ export const MenuDeslizante = () => {
 				<MenuTelefono>
 					<EstiloMenu>
 						<ContenedorBotonX>
-							<BotonX onClick={mostrarOcultar} />
+							<BotonImagen
+								onClick={mostrarOcultar}
+								src='/images/iconos/icon_x.png'
+								width={31}
+								height={31}
+							/>
 						</ContenedorBotonX>
 						<Menu />
 					</EstiloMenu>
 				</MenuTelefono>
 			) : (
-				<BotonMenuTlf onClick={mostrarOcultar} />
+				<BotonImagen
+					onClick={mostrarOcultar}
+					src='/images/iconos/icon_menu.png'
+					width={33}
+					height={33}
+				/>
 			)}
 		</ContenedorMenuTlf>
 	);

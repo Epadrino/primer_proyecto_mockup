@@ -1,11 +1,13 @@
 import React from 'react';
-import { BotonSalir } from '../botones';
+import { BotonImagen } from '../botones';
 import { EnlaceMenu } from '../enlaces';
 import { Idioma } from '../idiomas';
 import {
 	ContenedorDeBoton,
 	ContenedorDeEnlaces,
+	ContenedorSalir,
 	Separador,
+	Texto,
 } from './StyledMenu';
 
 export const Menu = () => {
@@ -18,7 +20,14 @@ export const Menu = () => {
 			<Separador />
 			<ContenedorDeBoton>
 				<Idioma />
-				<BotonSalir />
+				<ContenedorSalir>
+					<BotonImagen
+						src='/images/iconos/log_in.png'
+						width={33}
+						height={33}
+					/>
+					<Texto>salir</Texto>
+				</ContenedorSalir>
 			</ContenedorDeBoton>
 		</>
 	);

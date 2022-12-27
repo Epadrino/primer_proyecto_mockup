@@ -59,3 +59,22 @@ export const ContenedorDeBoton = styled.div`
 		width: 100%;
 	}
 `;
+
+export const ContenedorSalir = styled.span`
+	display: flex;
+	align-items: center;
+	align-items: flex-start;
+`;
+export const Texto = styled.h3`
+	display: flex;
+	justify-content: center;
+
+	color: ${(props) => props.theme.colors.primary};
+	font-family: ${(props) => props.theme.fonts.primary};
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: 0px;
+
+	font-size: 13px;
+	line-height: 14.95px;
+`;

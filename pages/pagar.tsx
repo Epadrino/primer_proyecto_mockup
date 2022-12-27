@@ -1,8 +1,7 @@
 import {
-	BotonBusd,
-	BotonIrAPagar,
-	BotonUsdt,
-	BotonVerDetalles,
+	BotonAccion,
+	BotonMonedaEscr,
+	BotonMonedaTlf,
 } from '../componentes/botones';
 import { LayoutDentro } from '../componentes/layaouts';
 import {
@@ -39,12 +38,34 @@ export default function Pagar() {
 				</ContenedorItem>
 				<TituloDos>Valor a pagar: 200 USD</TituloDos>
 				<ContenedorDeBotones>
-					<BotonUsdt />
-					<BotonBusd />
+					<BotonMonedaEscr
+						src={'/images/iconos/icon_TETHER.png'}
+						width={35}
+						height={35}
+						text={'BUSD'}
+					/>
+					<BotonMonedaTlf
+						src={'/images/iconos/icon_TETHER.png'}
+						width={26}
+						height={26}
+						text={'BUSD'}
+					/>
+					<BotonMonedaEscr
+						src={'/images/iconos/icon_BUSD.png'}
+						width={34}
+						height={34}
+						text={'BUSD'}
+					/>
+					<BotonMonedaTlf
+						src={'/images/iconos/icon_BUSD.png'}
+						width={26}
+						height={26}
+						text={'BUSD'}
+					/>
 				</ContenedorDeBotones>
 				<ContenedorDeBotones2>
-					<BotonIrAPagar />
-					<BotonVerDetalles />
+					<BotonAccion text='Ir a mi Pagar' />
+					<BotonAccion text='Ver detalles' />
 				</ContenedorDeBotones2>
 			</Contenedor>
 		</LayoutDentro>

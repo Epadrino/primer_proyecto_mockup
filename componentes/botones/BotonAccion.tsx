@@ -6,26 +6,30 @@ const BotonDeContinuar = styled.button`
 	font-family: ${(props) => props.theme.fonts.primary};
 	font-weight: 700;
 	background: transparent;
-	border: 2px solid ${(props) => props.theme.backgrounds.secondary};
-	border-radius: 5px;
 	color: ${(props) => props.theme.colors.secondary};
+	cursor: pointer;
+
 	&:hover {
 		background: ${(props) => props.theme.backgrounds.secondary};
 		color: ${(props) => props.theme.colors.tertiary};
 	}
 	@media ${device.mobileXS} {
-		height: 33px;
-		width: 118px;
+		width: 143px;
+		height: 40px;
 		border-radius: 3px;
 		font-size: 12px;
 		line-height: 14px;
+		border: 1px solid ${(props) => props.theme.backgrounds.secondary};
+		border-radius: 3px;
 	}
 	@media ${device.tablet} {
-		height: 66px;
-		width: 217px;
+		width: 169px;
+		height: 47px;
 		border-radius: 5px;
 		font-size: 20px;
 		line-height: 24px;
+		border: 2px solid ${(props) => props.theme.backgrounds.secondary};
+		border-radius: 5px;
 	}
 `;
 

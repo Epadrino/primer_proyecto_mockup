@@ -12,11 +12,13 @@ export const Contenedor = styled.div`
 	min-height: 500px;
 
 	@media ${device.mobileXS} {
+		min-width: 0px;
 		grid-row: 2;
 		grid-column: 1/4;
 	}
 
 	@media ${device.tablet} {
+		min-width: 550px;
 		grid-column: 3;
 		grid-row: 1 / spam 2;
 	}

@@ -15,7 +15,6 @@ export const Contenedor = styled.div`
 	@media ${device.tablet} {
 		grid-template-columns: 6vw 30vw auto 6vw;
 		height: 70.91vh;
-		min-height: 500px;
 	}
 `;
 
