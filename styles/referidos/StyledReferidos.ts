@@ -1,0 +1,53 @@
+import styled from 'styled-components';
+import { device } from '../../utils/devices';
+
+export const Contenedor = styled.div`
+	display: flex;
+	flex-direction: column;
+
+	@media ${device.mobileXS} {
+		grid-template-columns: 7.5vw auto 7.5vw;
+		height: 85.36vh;
+		width: 80%;
+	}
+	@media ${device.tablet} {
+		grid-template-columns: 6vw 30vw auto 6vw;
+		height: 70.91vh;
+		min-height: 500px;
+	}
+`;
+export const ContenedorRuta = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	height: 100px;
+	width: 100%;
+`;
+export const Titulo = styled.div`
+	color: ${(props) => props.theme.colors.primary};
+
+	@media ${device.mobileXS} {
+		font-family: ${(props) => props.theme.fonts.primary};
+		font-weight: 700;
+		font-size: 20px;
+	}
+	@media ${device.tablet} {
+		font-family: ${(props) => props.theme.fonts.primary};
+		font-weight: 700;
+		font-size: 32px;
+	}
+`;
+export const ContenedorTabla = styled.div`
+	display: flex;
+	align-items: flex-start;
+
+	width: 100%;
+`;
+
+export const BotonLista = styled.div``;
+export const ContenedorListaBoton = styled.div`
+	justify-content: right;
+	display: flex;
+	height: 100px;
+	width: 100%;
+`;

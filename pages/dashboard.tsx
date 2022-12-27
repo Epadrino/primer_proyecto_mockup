@@ -31,7 +31,7 @@ import {
 	ContenedorListaTlf,
 	ContenedorListaEscritorio,
 	ContenedorFondo,
-} from '../styles/Dashboard/StyledDashboard';
+} from '../styles/dashboard/StyledDashboard';
 
 export default function dashboard() {
 	return (
