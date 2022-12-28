@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { FC, PropsWithChildren } from 'react';
+
+import { FC, PropsWithChildren, useEffect, useState } from 'react';
+
 import { EnlacePieDePagina } from '../enlaces';
 import { Menu, MenuDeslizante } from '../menu';
-
 import {
 	RedSocialDiscord,
 	RedSocialFacebook,
@@ -30,7 +31,6 @@ import {
 	Contenedor2,
 	Cuerpo,
 } from './StyledLayoutDentro';
-import { ImagenEscritorio, ImagenTlf } from './StyledLayouts';
 
 interface Props {
 	title?: string;
@@ -42,6 +42,24 @@ export const LayoutDentro: FC<PropsWithChildren<Props>> = ({
 	title,
 	description,
 }) => {
+	const [windowSize, setWindowSize] = useState(getWindowSize());
+
+	useEffect(() => {
+		function handleWindowResize() {
+			setWindowSize(getWindowSize());
+		}
+
+		window.addEventListener('resize', handleWindowResize);
+
+		return () => {
+			window.removeEventListener('resize', handleWindowResize);
+		};
+	}, []);
+
+	function getWindowSize() {
+		const { innerWidth, innerHeight } = global;
+		return { innerWidth, innerHeight };
+	}
 	return (
 		<ContenedorLayout>
 			<Head>
@@ -57,22 +75,12 @@ export const LayoutDentro: FC<PropsWithChildren<Props>> = ({
 			</Head>
 			<Cabezera>
 				<ContenedorDeLogo>
-					<ImagenTlf>
-						<Image
-							src='/images/logo/logo_mockup.png'
-							alt='Cargando Logo'
-							width={38}
-							height={38}
-						/>
-					</ImagenTlf>
-					<ImagenEscritorio>
-						<Image
-							src='/images/logo/logo_mockup.png'
-							alt='Cargando Logo'
-							width={78}
-							height={78}
-						/>
-					</ImagenEscritorio>
+					<Image
+						src='/images/logo/logo_mockup.png'
+						alt='Cargando Logo'
+						width={windowSize.innerWidth > 768 ? 78 : 38}
+						height={windowSize.innerWidth > 768 ? 78 : 38}
+					/>
 					<Titulo>LOGO MOCKUP</Titulo>
 				</ContenedorDeLogo>
 				<ContenedorDeMenu>

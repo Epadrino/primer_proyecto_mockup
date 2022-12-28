@@ -1,8 +1,6 @@
-import {
-	BotonAccion,
-	BotonMonedaEscr,
-	BotonMonedaTlf,
-} from '../componentes/botones';
+import { useEffect, useState } from 'react';
+
+import { BotonAccion, BotonMoneda } from '../componentes/botones';
 import { LayoutDentro } from '../componentes/layaouts';
 import {
 	Contenedor,
@@ -17,6 +15,24 @@ import {
 } from '../styles/pagar/StyledPagar';
 
 export default function Pagar() {
+	const [windowSize, setWindowSize] = useState(getWindowSize());
+
+	useEffect(() => {
+		function handleWindowResize() {
+			setWindowSize(getWindowSize());
+		}
+
+		window.addEventListener('resize', handleWindowResize);
+
+		return () => {
+			window.removeEventListener('resize', handleWindowResize);
+		};
+	}, []);
+
+	function getWindowSize() {
+		const { innerWidth, innerHeight } = global;
+		return { innerWidth, innerHeight };
+	}
 	return (
 		<LayoutDentro title='Pagar'>
 			<Contenedor>
@@ -38,28 +54,16 @@ export default function Pagar() {
 				</ContenedorItem>
 				<TituloDos>Valor a pagar: 200 USD</TituloDos>
 				<ContenedorDeBotones>
-					<BotonMonedaEscr
+					<BotonMoneda
 						src={'/images/iconos/icon_TETHER.png'}
-						width={35}
-						height={35}
+						width={windowSize.innerWidth > 768 ? 35 : 26}
+						height={windowSize.innerWidth > 768 ? 35 : 26}
 						text={'BUSD'}
 					/>
-					<BotonMonedaTlf
-						src={'/images/iconos/icon_TETHER.png'}
-						width={26}
-						height={26}
-						text={'BUSD'}
-					/>
-					<BotonMonedaEscr
+					<BotonMoneda
 						src={'/images/iconos/icon_BUSD.png'}
-						width={34}
-						height={34}
-						text={'BUSD'}
-					/>
-					<BotonMonedaTlf
-						src={'/images/iconos/icon_BUSD.png'}
-						width={26}
-						height={26}
+						width={windowSize.innerWidth > 768 ? 35 : 26}
+						height={windowSize.innerWidth > 768 ? 35 : 26}
 						text={'BUSD'}
 					/>
 				</ContenedorDeBotones>

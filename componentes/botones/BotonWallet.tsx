@@ -1,28 +1,31 @@
 import Image from 'next/image';
-import { ImagenEscritorio, ImagenTlf } from '../layaouts/StyledLayouts';
 import styled from 'styled-components';
 import { device } from '../../utils/devices';
+import { FC } from 'react';
 
 const BotonDeWallet = styled.button`
 	display: flex;
 	align-items: center;
-
+	cursor: pointer;
 	background: ${(props) => props.theme.backgrounds.tertiary};
 	color: ${(props) => props.theme.colors.primary};
 	border-radius: 50px;
+	&:hover {
+		&:hover {
+			background: ${(props) => props.theme.backgrounds.secondary};
+		}
+	}
 
 	@media ${device.mobileXS} {
 		width: 277px;
 		height: 54px;
 		font-size: 12px;
 		line-height: 14px;
-		margin-top: 16px;
 	}
 	@media ${device.tablet} {
 		width: 525px;
-		height: 91px;
+		height: 70px;
 		font-size: 24px;
-		margin-top: 31px;
 	}
 `;
 
@@ -34,16 +37,12 @@ const FondodeIcono = styled.div`
 	border-radius: 50px;
 
 	@media ${device.mobileXS} {
-		max-width: 41px;
-		max-height: 41px;
-		min-width: 41px;
-		min-height: 41px;
+		width: 50px;
+		height: 40px;
 	}
 	@media ${device.tablet} {
-		max-width: 75px;
-		max-height: 75px;
-		min-width: 75px;
-		min-height: 75px;
+		width: 65px;
+		height: 55px;
 	}
 `;
 
@@ -51,10 +50,12 @@ const Texto = styled.h1`
 	flex-basis: 100%;
 
 	color: ${(props) => props.theme.colors.primary};
-
+	&:hover {
+		color: ${(props) => props.theme.colors.tertiary};
+	}
 	@media ${device.mobileXS} {
 		font-family: ${(props) => props.theme.fonts.primary};
-		font-weight: 400;
+		font-weight: 700;
 		font-size: 12px;
 		text-align: left;
 		padding: 10px;
@@ -67,27 +68,21 @@ const Texto = styled.h1`
 		padding: 0px;
 	}
 `;
-
-export const BotonWallet = () => {
+interface Props {
+	src: string;
+	width: number;
+	height: number;
+}
+export const BotonWallet: FC<Props> = ({ src, width, height }) => {
 	return (
 		<BotonDeWallet>
 			<FondodeIcono>
-				<ImagenTlf>
-					<Image
-						src='/images/iconos/wallet_connect.png'
-						alt='Cargando Logo'
-						width={34}
-						height={34}
-					/>
-				</ImagenTlf>
-				<ImagenEscritorio>
-					<Image
-						src='/images/iconos/wallet_connect.png'
-						alt='Cargando Logo'
-						width={61}
-						height={61}
-					/>
-				</ImagenEscritorio>
+				<Image
+					src={src}
+					alt='Cargando Logo'
+					width={width}
+					height={height}
+				/>
 			</FondodeIcono>
 			<Texto>Connect with MetaMask</Texto>
 		</BotonDeWallet>

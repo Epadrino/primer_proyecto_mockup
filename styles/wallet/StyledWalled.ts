@@ -5,14 +5,11 @@ export const Contenedor = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	height: 100%;
 
 	@media ${device.mobileXS} {
-		height: 91.36vh;
-		margin-bottom: 110;
 	}
 	@media ${device.tablet} {
-		height: 70.91vh;
-		margin-bottom: 80;
 	}
 `;
 export const ContenedorUno = styled.div`
@@ -47,5 +44,36 @@ export const TituloWalled = styled.h1`
 		line-height: 41px;
 		margin-top: 27;
 		margin-bottom: 80;
+	}
+`;
+
+export const ContenedorBoton = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+`;
+
+export const ContenedorTexto = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@media ${device.mobileXS} {
+		width: 100%;
+		position: relative;
+		::after {
+			content: '';
+			display: block;
+			padding-bottom: 30%;
+		}
+	}
+	@media ${device.tablet} {
+		width: 100%;
+		position: relative;
+		::after {
+			content: '';
+			display: block;
+			padding-bottom: 10%;
+		}
 	}
 `;

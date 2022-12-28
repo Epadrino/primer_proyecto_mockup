@@ -63,7 +63,7 @@ export const ContenedorDeBoton = styled.div`
 export const ContenedorSalir = styled.span`
 	display: flex;
 	align-items: center;
-	align-items: flex-start;
+	justify-content: start;
 `;
 export const Texto = styled.h3`
 	display: flex;
@@ -77,4 +77,5 @@ export const Texto = styled.h3`
 
 	font-size: 13px;
 	line-height: 14.95px;
+	margin: 0;
 `;

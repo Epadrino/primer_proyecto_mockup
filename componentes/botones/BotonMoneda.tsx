@@ -4,6 +4,7 @@ import { device } from '../../utils/devices';
 import { FC } from 'react';
 
 const Boton = styled.button`
+	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
 
@@ -19,7 +20,6 @@ const Boton = styled.button`
 	}
 
 	@media ${device.mobileXS} {
-		display: flex;
 		width: 105px;
 		height: 38px;
 		font-size: 12px;
@@ -30,7 +30,14 @@ const Boton = styled.button`
 		font-size: 15px;
 	}
 	@media ${device.tablet} {
-		display: none;
+		width: 143px;
+		height: 51px;
+		font-size: 24px;
+
+		font-family: ${(props) => props.theme.fonts.primary};
+		font-size: 20px;
+		text-align: center;
+		padding: 0px;
 	}
 `;
 interface Props {
@@ -41,7 +48,7 @@ interface Props {
 	onClick?: () => void;
 }
 
-export const BotonMonedaTlf: FC<Props> = ({
+export const BotonMoneda: FC<Props> = ({
 	text,
 	src,
 	width,

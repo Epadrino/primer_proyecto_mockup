@@ -1,5 +1,6 @@
 import { BotonAccion } from '../componentes/botones';
 import { LayoutDentro } from '../componentes/layaouts';
+import { Carga } from '../componentes/mensajes';
 import { Productos } from '../componentes/productos';
 import {
 	Contenedor,

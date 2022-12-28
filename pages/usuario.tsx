@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import { BotonAccion } from '../componentes/botones';
 import { Input } from '../componentes/inputs';
 import { LayoutUsuario } from '../componentes/layaouts';
@@ -28,26 +29,34 @@ import {
 export default function Usuario() {
 	const { estado, mostrarOcultar } = useEstado(false);
 
+	const [windowSize, setWindowSize] = useState(getWindowSize());
+
+	useEffect(() => {
+		function handleWindowResize() {
+			setWindowSize(getWindowSize());
+		}
+
+		window.addEventListener('resize', handleWindowResize);
+
+		return () => {
+			window.removeEventListener('resize', handleWindowResize);
+		};
+	}, []);
+
+	function getWindowSize() {
+		const { innerWidth, innerHeight } = global;
+		return { innerWidth, innerHeight };
+	}
 	return (
 		<LayoutUsuario title='Usuario'>
 			<ContenedorCuerpo>
 				<ContenedorUno>
-					<ImagenTlf>
-						<Image
-							src='/images/logo/logo_mockup.png'
-							alt='Cargando Logo'
-							width={159}
-							height={161}
-						/>
-					</ImagenTlf>
-					<ImagenEscritorio>
-						<Image
-							src='/images/logo/logo_mockup.png'
-							alt='Cargando Logo'
-							width={296}
-							height={299}
-						/>
-					</ImagenEscritorio>
+					<Image
+						src='/images/logo/logo_mockup.png'
+						alt='Cargando Logo'
+						width={windowSize.innerWidth > 768 ? 296 : 159}
+						height={windowSize.innerWidth > 768 ? 299 : 161}
+					/>
 				</ContenedorUno>
 				<ContenedorDos>
 					<TituloUsuario>Crea un usuario</TituloUsuario>
@@ -55,22 +64,14 @@ export default function Usuario() {
 					<Contenedor>
 						<Input placeholder={'Código de referido'} />
 						<ContenedorIcon>
-							<ImagenTlf>
-								<Image
-									src='/images/iconos/Check.png'
-									alt='Cargando Logo'
-									width={19}
-									height={19}
-								/>
-							</ImagenTlf>
-							<ImagenEscritorio>
-								<Image
-									src='/images/iconos/Check.png'
-									alt='Cargando Logo'
-									width={33.29}
-									height={33.29}
-								/>
-							</ImagenEscritorio>
+							<Image
+								src='/images/iconos/Check.png'
+								alt='Cargando Logo'
+								width={windowSize.innerWidth > 768 ? 33.29 : 19}
+								height={
+									windowSize.innerWidth > 768 ? 33.29 : 19
+								}
+							/>
 						</ContenedorIcon>
 					</Contenedor>
 					{/* <ContenedorMensajeUno>

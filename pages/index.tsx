@@ -1,4 +1,7 @@
 import Image from 'next/image';
+
+import { useEffect, useState } from 'react';
+
 import { BotonAccion } from '../componentes/botones';
 import { Input } from '../componentes/inputs';
 import { LayoutInicio } from '../componentes/layaouts';
@@ -16,26 +19,34 @@ import {
 } from '../styles/referido/StyledReferido';
 
 export default function Referido() {
+	const [windowSize, setWindowSize] = useState(getWindowSize());
+
+	useEffect(() => {
+		function handleWindowResize() {
+			setWindowSize(getWindowSize());
+		}
+
+		window.addEventListener('resize', handleWindowResize);
+
+		return () => {
+			window.removeEventListener('resize', handleWindowResize);
+		};
+	}, []);
+
+	function getWindowSize() {
+		const { innerWidth, innerHeight } = global;
+		return { innerWidth, innerHeight };
+	}
 	return (
 		<LayoutInicio title='Referido'>
 			<ContenedorCuerpo>
 				<ContenedorUno>
-					<ImagenTlf>
-						<Image
-							src='/images/logo/logo_mockup.png'
-							alt='Imagen'
-							width={159}
-							height={161}
-						/>
-					</ImagenTlf>
-					<ImagenEscritorio>
-						<Image
-							src='/images/logo/logo_mockup.png'
-							alt='Imagen'
-							width={348}
-							height={351}
-						/>
-					</ImagenEscritorio>
+					<Image
+						src='/images/logo/logo_mockup.png'
+						alt='Imagen'
+						width={windowSize.innerWidth > 768 ? 348 : 159}
+						height={windowSize.innerWidth > 768 ? 351 : 161}
+					/>
 				</ContenedorUno>
 				<ContenedorDos>
 					<Contenedor>
