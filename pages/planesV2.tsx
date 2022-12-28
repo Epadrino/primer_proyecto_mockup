@@ -1,9 +1,4 @@
-import {
-	BotonDer,
-	BotonIrAPagar,
-	BotonIzq,
-	BotonVerDetalles,
-} from '../componentes/botones';
+import { BotonAccion, BotonImagen } from '../componentes/botones';
 import { LayoutDentro } from '../componentes/layaouts';
 import {
 	Contenedor,
@@ -28,7 +23,11 @@ export default function PlanesV2() {
 				<ContenedorDer>
 					<ContenedorDeProductos>
 						<ContenedorDeFlecha>
-							<BotonIzq />
+							<BotonImagen
+								src='./images/iconos/icon_izq'
+								width={46}
+								height={46}
+							/>
 						</ContenedorDeFlecha>
 						<Productos>
 							<TextoDeTarjetas>NOMBRE TARJETA</TextoDeTarjetas>
@@ -43,7 +42,11 @@ export default function PlanesV2() {
 							<TextoDeTarjetas>200 USD</TextoDeTarjetas>
 						</Productos>
 						<ContenedorDeFlecha>
-							<BotonDer />
+							<BotonImagen
+								src='/images/iconos/icon_der.png'
+								width={46}
+								height={46}
+							/>
 						</ContenedorDeFlecha>
 					</ContenedorDeProductos>
 				</ContenedorDer>
@@ -52,8 +55,8 @@ export default function PlanesV2() {
 					<Titulo>200 USD</Titulo>
 				</ContenedorDeTextos>
 				<ContenedorDeBotones>
-					<BotonIrAPagar />
-					<BotonVerDetalles />
+					<BotonAccion text='Ir a Pagar' />
+					<BotonAccion text='Ver detalles' />
 				</ContenedorDeBotones>
 			</Contenedor>
 		</LayoutDentro>

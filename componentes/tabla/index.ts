@@ -1,1 +1,1 @@
-import * from './TablaInformativa'
+export * from './TablaInformativa';
