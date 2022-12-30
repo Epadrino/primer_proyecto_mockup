@@ -22,12 +22,19 @@ export const ContenedorUno = styled.div`
 	justify-content: center;
 	row-gap: 20px;
 	height: 100%;
-
+`;
+export const ContenedorImangen = styled.div`
+	position: relative;
 	@media ${device.mobileXS} {
+		width: 159px;
+		height: 161px;
 	}
 	@media ${device.tablet} {
+		width: 348px;
+		height: 351px;
 	}
 `;
+
 export const ContenedorDos = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -71,11 +78,19 @@ export const ContenedorIcon = styled.div`
 		left: 85.5%;
 		top: 27%;
 		z-index: 1;
+		div {
+			width: 21px;
+			height: 21px;
+		}
 	}
 	@media ${device.tablet} {
 		position: absolute;
 		left: 88%;
 		top: 15%;
 		z-index: 1;
+		div {
+			width: 32px;
+			height: 32px;
+		}
 	}
 `;

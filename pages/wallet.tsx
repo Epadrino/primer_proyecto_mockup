@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import { useEffect, useState } from 'react';
 
 import { BotonWallet } from '../componentes/botones';
@@ -35,11 +33,9 @@ export default function Wallet() {
 		<LayoutInicio title='Wallet'>
 			<Contenedor>
 				<ContenedorUno>
-					<Image
+					<img
 						src='/images/logo/logo_mockup.png'
 						alt='Cargando Logo'
-						width={windowSize.innerWidth > 768 ? 296 : 159}
-						height={windowSize.innerWidth > 768 ? 299 : 161}
 					/>
 				</ContenedorUno>
 				<ContenedorTexto>

@@ -66,7 +66,7 @@ export const ContenedorSalir = styled.span`
 	justify-content: start;
 `;
 export const Texto = styled.h3`
-	display: flex;
+	cursor: pointer;
 	justify-content: center;
 
 	color: ${(props) => props.theme.colors.primary};
@@ -75,7 +75,13 @@ export const Texto = styled.h3`
 	text-align: center;
 	letter-spacing: 0px;
 
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 14.95px;
-	margin: 0;
+	padding-left: 5px;
+	@media ${device.mobileXS} {
+		display: flex;
+	}
+	@media ${device.tablet} {
+		display: none;
+	}
 `;

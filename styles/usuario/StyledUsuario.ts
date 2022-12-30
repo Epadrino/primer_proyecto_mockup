@@ -19,9 +19,17 @@ export const ContenedorUno = styled.div`
 	justify-content: center;
 	@media ${device.mobileXS} {
 		padding-top: 40px;
+		img {
+			width: 159;
+			height: 161;
+		}
 	}
 	@media ${device.tablet} {
 		padding-top: 0px;
+		img {
+			width: 296;
+			height: 299;
+		}
 	}
 `;
 
@@ -214,11 +222,19 @@ export const ContenedorIcon = styled.div`
 		left: 85.5%;
 		top: 27%;
 		z-index: 1;
+		img {
+			width: 19;
+			height: 19;
+		}
 	}
 	@media ${device.tablet} {
 		position: absolute;
 		left: 88%;
 		top: 15%;
 		z-index: 1;
+		img {
+			width: 33.29;
+			height: 33.29;
+		}
 	}
 `;

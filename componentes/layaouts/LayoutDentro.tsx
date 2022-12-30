@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 
-import { FC, PropsWithChildren, useEffect, useState } from 'react';
+import { FC, PropsWithChildren } from 'react';
 
 import { EnlacePieDePagina } from '../enlaces';
 import { Menu, MenuDeslizante } from '../menu';
@@ -42,24 +42,6 @@ export const LayoutDentro: FC<PropsWithChildren<Props>> = ({
 	title,
 	description,
 }) => {
-	const [windowSize, setWindowSize] = useState(getWindowSize());
-
-	useEffect(() => {
-		function handleWindowResize() {
-			setWindowSize(getWindowSize());
-		}
-
-		window.addEventListener('resize', handleWindowResize);
-
-		return () => {
-			window.removeEventListener('resize', handleWindowResize);
-		};
-	}, []);
-
-	function getWindowSize() {
-		const { innerWidth, innerHeight } = global;
-		return { innerWidth, innerHeight };
-	}
 	return (
 		<ContenedorLayout>
 			<Head>
@@ -75,11 +57,9 @@ export const LayoutDentro: FC<PropsWithChildren<Props>> = ({
 			</Head>
 			<Cabezera>
 				<ContenedorDeLogo>
-					<Image
+					<img
 						src='/images/logo/logo_mockup.png'
 						alt='Cargando Logo'
-						width={windowSize.innerWidth > 768 ? 78 : 38}
-						height={windowSize.innerWidth > 768 ? 78 : 38}
 					/>
 					<Titulo>LOGO MOCKUP</Titulo>
 				</ContenedorDeLogo>

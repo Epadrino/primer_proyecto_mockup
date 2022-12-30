@@ -19,8 +19,16 @@ export const ContenedorUno = styled.div`
 	padding-top: 0px;
 
 	@media ${device.mobileXS} {
+		img {
+			width: 159;
+			height: 161;
+		}
 	}
 	@media ${device.tablet} {
+		img {
+			width: 296;
+			height: 299;
+		}
 	}
 `;
 export const TituloWalled = styled.h1`

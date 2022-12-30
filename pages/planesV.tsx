@@ -1,7 +1,6 @@
 import { BotonAccion } from '../componentes/botones';
 import { LayoutDentro } from '../componentes/layaouts';
-import { Carga } from '../componentes/mensajes';
-import { Productos } from '../componentes/productos';
+import { Detalles, Productos } from '../componentes/productos';
 import {
 	Contenedor,
 	ContenedorDeBotones,
@@ -9,6 +8,7 @@ import {
 	ContenedorIzq,
 	Parrafo,
 	Titulo,
+	ContenedorDeProductos,
 } from '../styles/planesV/StyledPlanesV';
 
 export default function PlanesV() {
@@ -26,12 +26,15 @@ export default function PlanesV() {
 						</Parrafo>
 					</ContenedorDeTexto>
 				</ContenedorIzq>
+				<ContenedorDeProductos>
+					<Productos />
+				</ContenedorDeProductos>
 				<ContenedorDeBotones>
 					<BotonAccion text='Ir a mi Pagar' />
 					<BotonAccion text='Ver detalles' />
 				</ContenedorDeBotones>
-				<Productos />
 			</Contenedor>
+			<Detalles />
 		</LayoutDentro>
 	);
 }

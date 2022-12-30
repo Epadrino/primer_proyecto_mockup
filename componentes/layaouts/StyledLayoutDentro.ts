@@ -14,6 +14,7 @@ export const Cabezera = styled.div`
 
 	@media ${device.mobileXS} {
 		grid-template-columns: 7vw auto auto 7vw;
+		min-height: 50px;
 		background: ${(props) => props.theme.backgrounds.primary};
 	}
 	@media ${device.tablet} {
@@ -31,11 +32,13 @@ export const Cuerpo = styled.div`
 
 	@media ${device.mobileXS} {
 		grid-template-columns: 7vw auto auto 7vw;
+		height: 85.36vh;
 		background: ${(props) => props.theme.backgrounds.primary};
 	}
 	@media ${device.tablet} {
 		grid-template-columns: 6vw auto auto 5vw;
-		min-height: 80px;
+		height: 70.91vh;
+		min-height: 500px;
 		background: ${(props) => props.theme.backgrounds.primary};
 	}
 `;
@@ -45,9 +48,17 @@ export const ContenedorDeLogo = styled.div`
 	align-items: center;
 	@media ${device.mobileXS} {
 		grid-column: 2;
+		img {
+			width: 38px;
+			height: 38px;
+		}
 	}
 	@media ${device.tablet} {
 		grid-column: 2;
+		img {
+			width: 78px;
+			height: 78px;
+		}
 	}
 `;
 
@@ -97,7 +108,6 @@ export const PieDePagina = styled.div`
 	width: 100%;
 	height: 14.45vh;
 	background: ${(props) => props.theme.backgrounds.primary};
-
 	@media ${device.mobileXS} {
 		display: none;
 	}

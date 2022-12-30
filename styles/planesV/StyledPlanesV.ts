@@ -3,18 +3,15 @@ import { device } from '../../utils/devices';
 
 export const Contenedor = styled.div`
 	display: grid;
-
 	align-items: center;
-
 	width: 100%;
+	height: 100%;
 
 	@media ${device.mobileXS} {
 		grid-template-columns: 7.5vw auto 7.5vw;
-		height: 85.36vh;
 	}
 	@media ${device.tablet} {
-		grid-template-columns: 6vw 30vw auto 6vw;
-		height: 70.91vh;
+		grid-template-columns: 6vw 30% auto 6vw;
 	}
 `;
 
@@ -83,13 +80,33 @@ export const Parrafo = styled.div`
 		color: ${(props) => props.theme.colors.primary};
 	}
 `;
+export const ContenedorDeProductos = styled.div`
+	width: 100%;
+	height: 100%;
+	@media ${device.mobileXS} {
+		min-width: 0px;
+		grid-row: 2;
+		grid-column: 1/4;
+	}
+	@media ${device.tablet} {
+		min-width: 0px;
+		grid-column: 3;
+		grid-row: 1 / spam 2;
+	}
+	@media ${device.laptop} {
+		min-width: 550px;
+		grid-column: 3;
+		grid-row: 1 / spam 2;
+	}
+`;
 
 export const ContenedorDeBotones = styled.div`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	width: cal(100%-10px);
-	margin: 10px;
+	padding: 10px;
+	height: 120px;
 
 	@media ${device.mobileXS} {
 		justify-content: center;
@@ -97,7 +114,6 @@ export const ContenedorDeBotones = styled.div`
 		grid-row: 3;
 		grid-column: 1 / 4;
 
-		height: 120px;
 		gap: 10px;
 	}
 	@media ${device.tablet} {
@@ -108,7 +124,6 @@ export const ContenedorDeBotones = styled.div`
 		grid-column: 2;
 		grid-row: 2;
 
-		min-height: 120px;
 		gap: 20px;
 	}
 	@media ${device.laptop} {
@@ -119,7 +134,6 @@ export const ContenedorDeBotones = styled.div`
 		grid-column: 2;
 		grid-row: 2;
 
-		min-height: 120px;
 		gap: 20px;
 	}
 `;
