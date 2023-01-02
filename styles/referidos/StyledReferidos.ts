@@ -6,12 +6,12 @@ export const Contenedor = styled.div`
 	flex-direction: column;
 
 	@media ${device.mobileXS} {
-		grid-template-columns: 7.5vw auto 7.5vw;
+		grid-template-columns: 7.5vw 1fr 7.5vw;
 		height: 85.36vh;
 		width: 80%;
 	}
 	@media ${device.tablet} {
-		grid-template-columns: 6vw 30vw auto 6vw;
+		grid-template-columns: 6vw 30vw 1fr 6vw;
 		height: 70.91vh;
 		min-height: 500px;
 	}
