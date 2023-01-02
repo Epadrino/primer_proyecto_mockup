@@ -1,5 +1,5 @@
-import { Carga } from '../componentes/mensajes';
+import { Detalles } from '../componentes/productos';
 
 export default function Wallet() {
-	return <Carga />;
+	return <Detalles />;
 }

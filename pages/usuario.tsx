@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { BotonAccion } from '../componentes/botones';
 import { Input } from '../componentes/inputs';
 import { LayoutUsuario } from '../componentes/layaouts';
@@ -27,10 +29,13 @@ export default function Usuario() {
 		<LayoutUsuario title='Usuario'>
 			<ContenedorCuerpo>
 				<ContenedorUno>
-					<img
-						src='/images/logo/logo_mockup.png'
-						alt='Cargando Logo'
-					/>
+					<div>
+						<Image
+							src='/images/iconos/logo_mockup.png'
+							alt='Img'
+							fill
+						/>
+					</div>
 				</ContenedorUno>
 				<ContenedorDos>
 					<TituloUsuario>Crea un usuario</TituloUsuario>
@@ -38,10 +43,13 @@ export default function Usuario() {
 					<Contenedor>
 						<Input placeholder={'Código de referido'} />
 						<ContenedorIcon>
-							<img
-								src='/images/iconos/Check.png'
-								alt='Cargando Logo'
-							/>
+							<div>
+								<Image
+									src='/images/iconos/Check.png'
+									alt='Img'
+									fill
+								/>
+							</div>
 						</ContenedorIcon>
 					</Contenedor>
 					{/* <ContenedorMensajeUno>

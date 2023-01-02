@@ -9,10 +9,10 @@ export const ContenedorCuerpo = styled.div`
 	height: 100%;
 
 	@media ${device.mobileXS} {
-		height: 91.36vh;
+		height: 90.36vh;
 	}
 	@media ${device.tablet} {
-		height: 70.91vh;
+		height: 60.91vh;
 	}
 `;
 
@@ -26,12 +26,16 @@ export const ContenedorUno = styled.div`
 export const ContenedorImangen = styled.div`
 	position: relative;
 	@media ${device.mobileXS} {
-		width: 159px;
-		height: 161px;
+		div {
+			width: 159px;
+			height: 161px;
+		}
 	}
 	@media ${device.tablet} {
-		width: 348px;
-		height: 351px;
+		div {
+			width: 348px;
+			height: 351px;
+		}
 	}
 `;
 

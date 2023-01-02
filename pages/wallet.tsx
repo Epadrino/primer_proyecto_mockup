@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 import { BotonWallet } from '../componentes/botones';
 import { LayoutInicio } from '../componentes/layaouts';
@@ -8,50 +8,45 @@ import {
 	ContenedorUno,
 	TituloWalled,
 	ContenedorTexto,
+	Metamask,
+	WalletConnect,
 } from '../styles/wallet/StyledWalled';
 
 export default function Wallet() {
-	const [windowSize, setWindowSize] = useState(getWindowSize());
-
-	useEffect(() => {
-		function handleWindowResize() {
-			setWindowSize(getWindowSize());
-		}
-
-		window.addEventListener('resize', handleWindowResize);
-
-		return () => {
-			window.removeEventListener('resize', handleWindowResize);
-		};
-	}, []);
-
-	function getWindowSize() {
-		const { innerWidth } = global;
-		return { innerWidth };
-	}
 	return (
 		<LayoutInicio title='Wallet'>
 			<Contenedor>
 				<ContenedorUno>
-					<img
-						src='/images/logo/logo_mockup.png'
-						alt='Cargando Logo'
-					/>
+					<div>
+						<Image
+							src='/images/logo/logo_mockup.png'
+							alt='Cargando Logo'
+							fill
+						/>
+					</div>
 				</ContenedorUno>
 				<ContenedorTexto>
 					<TituloWalled>Conecta tu Wallet.</TituloWalled>
 				</ContenedorTexto>
 				<ContenedorBoton>
-					<BotonWallet
-						src='/images/iconos/Metamask.png'
-						width={windowSize.innerWidth > 768 ? 45 : 30}
-						height={windowSize.innerWidth > 768 ? 45 : 30}
-					/>
-					<BotonWallet
-						src='/images/iconos/wallet_connect.png'
-						width={windowSize.innerWidth > 768 ? 51 : 31}
-						height={windowSize.innerWidth > 768 ? 51 : 31}
-					/>
+					<BotonWallet text='Connect with MetaMask'>
+						<Metamask>
+							<Image
+								src='/images/iconos/Metamask.png'
+								alt='Img'
+								fill
+							/>
+						</Metamask>
+					</BotonWallet>
+					<BotonWallet text='Connect with MetaMask'>
+						<WalletConnect>
+							<Image
+								src='/images/iconos/wallet_connect.png'
+								alt='Img'
+								fill
+							/>
+						</WalletConnect>
+					</BotonWallet>
 				</ContenedorBoton>
 			</Contenedor>
 		</LayoutInicio>

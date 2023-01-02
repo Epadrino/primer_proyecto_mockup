@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { FC } from 'react';
+import { FC, PropsWithChildren } from 'react';
 import styled from 'styled-components';
 
 const Boton = styled.button`
@@ -9,30 +9,26 @@ const Boton = styled.button`
 	background: transparent;
 	cursor: pointer;
 	position: relative;
-	width: 100%;
-	height: 100%;
+	width: auto;
+	height: auto;
 	padding: 0px;
 	border: 0px;
 `;
 
 interface Props {
 	text?: string;
-	src?: string;
-	width?: number;
-	height?: number;
+
 	onClick?: () => void;
 }
 
-export const BotonImagen: FC<Props> = ({
+export const BotonImagen: FC<PropsWithChildren<Props>> = ({
 	text,
-	width,
-	height,
 	onClick,
-	src,
+	children,
 }) => {
 	return (
 		<Boton onClick={onClick}>
-			<Image src={src} alt='Image' width={width} height={height} />
+			{children}
 			{text}
 		</Boton>
 	);

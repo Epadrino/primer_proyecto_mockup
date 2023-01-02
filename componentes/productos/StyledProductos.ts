@@ -165,3 +165,15 @@ export const Producto2 = styled.div`
 		}
 	}
 `;
+
+export const Icon = styled.div`
+	position: relative;
+	@media ${device.mobileXS} {
+		width: 46px;
+		height: 46px;
+	}
+	@media ${device.tablet} {
+		width: 46px;
+		height: 46px;
+	}
+`;

@@ -31,17 +31,6 @@ export const LayoutUsuario: FC<PropsWithChildren<Props>> = ({
 				/>
 				<link rel='ico' href='/images/logo/logo_mockup.png' />
 			</Head>
-			<Head>
-				<title>{title || 'Logo Mockup'}</title>
-				<meta
-					name='description'
-					content={`${
-						description ||
-						'Vive la mejor experiencia y obtén los mejores resulados.'
-					}`}
-				/>
-				<link rel='ico' href='/images/logo/logo_mockup.png' />
-			</Head>
 			<Cabecera>
 				<ContenedorIdioma>
 					<Idioma />

@@ -3,11 +3,10 @@ import { device } from '../../utils/devices';
 
 export const Contenedor = styled.div`
 	display: grid;
-	height: 100%;
 	column-gap: 2.91vw;
 
 	@media ${device.mobileXS} {
-		height: 91.36vh;
+		height: 85vh;
 		align-items: center;
 		justify-content: center;
 		width: 75%;
@@ -20,6 +19,7 @@ export const Contenedor = styled.div`
 	}
 `;
 export const ContenedorProducto = styled.div`
+	display: flex;
 	@media ${device.mobileXS} {
 		align-items: center;
 		justify-content: center;
@@ -48,7 +48,7 @@ export const Producto = styled.div`
 		max-width: 244px;
 	}
 	@media ${device.tablet} {
-		max-width: 300px;
+		max-width: 450px;
 	}
 	@media ${device.laptop} {
 		max-width: 500px;

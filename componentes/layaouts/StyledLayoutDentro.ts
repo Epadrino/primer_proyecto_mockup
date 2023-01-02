@@ -32,12 +32,10 @@ export const Cuerpo = styled.div`
 
 	@media ${device.mobileXS} {
 		grid-template-columns: 7vw auto auto 7vw;
-		height: 85.36vh;
 		background: ${(props) => props.theme.backgrounds.primary};
 	}
 	@media ${device.tablet} {
 		grid-template-columns: 6vw auto auto 5vw;
-		height: 70.91vh;
 		min-height: 500px;
 		background: ${(props) => props.theme.backgrounds.primary};
 	}
@@ -46,27 +44,24 @@ export const ContenedorDeLogo = styled.div`
 	display: flex;
 	width: 100%;
 	align-items: center;
+	grid-column: 2;
+`;
+
+export const Logo = styled.div`
+	position: relative;
 	@media ${device.mobileXS} {
-		grid-column: 2;
-		img {
-			width: 38px;
-			height: 38px;
-		}
+		width: 38px;
+		height: 38px;
 	}
 	@media ${device.tablet} {
-		grid-column: 2;
-		img {
-			width: 78px;
-			height: 78px;
-		}
+		width: 78px;
+		height: 78px;
 	}
 `;
 
 export const Titulo = styled.h1`
 	display: flex;
 	align-items: center;
-	width: 100%;
-
 	font-style: normal;
 	font-family: ${(props) => props.theme.fonts.primary};
 	color: ${(props) => props.theme.colors.primary};

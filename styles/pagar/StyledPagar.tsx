@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import { device } from '../../utils/devices';
 
 export const Contenedor = styled.div`
-	display: grid;
+	display: flex;
+	width: 100%;
 	justify-items: center;
 	align-items: center;
 	justify-content: center;
 	align-content: none;
-	width: 100%;
 
 	@media ${device.mobileXS} {
 		height: 91.36vh;
@@ -18,10 +18,24 @@ export const Contenedor = styled.div`
 	@media ${device.tablet} {
 		height: 70.91vh;
 		overflow: visible;
+		column-gap: 2%;
+		padding: 0 10px;
+	}
+	@media ${device.laptop} {
+		height: 70.91vh;
+		overflow: visible;
 		column-gap: 4%;
 		padding: 0 20px;
-		row-gap: 20px;
 	}
+`;
+
+export const Caja = styled.div`
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	align-content: none;
+	column-gap: 20px;
 `;
 
 export const TituloUno = styled.div`
@@ -40,7 +54,7 @@ export const TituloUno = styled.div`
 		text-align: center;
 	}
 	@media ${device.tablet} {
-		grid-row: 1;
+		grid-row: 2;
 		grid-column: 2;
 
 		font-family: ${(props) => props.theme.fonts.primary};
@@ -71,7 +85,7 @@ export const TituloDos = styled.div`
 		text-align: center;
 	}
 	@media ${device.tablet} {
-		grid-row: 4;
+		grid-row: 5;
 		grid-column: 2;
 
 		justify-content: flex-start;
@@ -106,7 +120,7 @@ export const Parrafo = styled.p`
 		line-height: 15px;
 	}
 	@media ${device.tablet} {
-		grid-row: 2;
+		grid-row: 3;
 		grid-column: 2;
 		max-width: 550px;
 
@@ -117,7 +131,7 @@ export const Parrafo = styled.p`
 		text-align: left;
 	}
 	@media ${device.laptop} {
-		grid-row: 2;
+		grid-row: 3;
 		grid-column: 2;
 		max-width: 550px;
 
@@ -129,15 +143,36 @@ export const Parrafo = styled.p`
 	}
 `;
 
-export const ContenedorItem = styled.ul`
+export const ContenedorItem = styled.div`
 	display: flex;
 	flex-direction: column;
 	width: cal(100%-1.2rem);
-	gap: 20px;
-	padding-left: 1.2rem;
-	list-style-type: circle;
-	margin: 0;
 
+	margin: 0;
+	ul {
+		font-family: ${(props) => props.theme.fonts.primary};
+		font-style: normal;
+		font-weight: 500;
+		color: ${(props) => props.theme.colors.primary};
+
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 24px;
+		letter-spacing: 0px;
+		text-align: left;
+
+		@media ${device.mobileXS} {
+			font-size: 12px;
+		}
+		@media ${device.tablet} {
+			font-size: 15px;
+		}
+		@media ${device.laptop} {
+			font-size: 20px;
+		}
+		li {
+		}
+	}
 	@media ${device.mobileXS} {
 		grid-row: 4;
 		grid-column: 1;
@@ -146,7 +181,7 @@ export const ContenedorItem = styled.ul`
 		height: 100%;
 	}
 	@media ${device.tablet} {
-		grid-row: 3;
+		grid-row: 4;
 		grid-column: 2;
 		justify-content: center;
 		align-items: center;
@@ -158,21 +193,7 @@ export const Item = styled.li`
 	display: flex;
 	width: 100%;
 	margin: 0px;
-
-	font-family: ${(props) => props.theme.fonts.primary};
-	font-style: normal;
-	font-weight: 500;
-	color: ${(props) => props.theme.colors.primary};
-
-	@media ${device.mobileXS} {
-		font-size: 12px;
-	}
-	@media ${device.tablet} {
-		font-size: 15px;
-	}
-	@media ${device.laptop} {
-		font-size: 20px;
-	}
+	list-style-type: disc;
 `;
 
 export const ContenedorDeBotones = styled.div`
@@ -188,7 +209,7 @@ export const ContenedorDeBotones = styled.div`
 		margin-bottom: 10px;
 	}
 	@media ${device.tablet} {
-		grid-row: 5;
+		grid-row: 6;
 		grid-column: 2;
 		justify-content: start;
 		align-items: flex-end;
@@ -218,7 +239,7 @@ export const ContenedorDeBotones2 = styled.div`
 		background: ${(props) => props.theme.backgrounds.header};
 	}
 	@media ${device.tablet} {
-		grid-row: 6;
+		grid-row: 7;
 		grid-column: 2;
 
 		justify-content: start;
@@ -234,7 +255,7 @@ export const ContenedorDeBotones2 = styled.div`
 		background: none;
 	}
 	@media ${device.laptop} {
-		grid-row: 6;
+		grid-row: 7;
 		grid-column: 2;
 
 		justify-content: start;
@@ -273,15 +294,39 @@ export const ContenedorDeMuestra = styled.div`
 		max-width: 244px;
 	}
 	@media ${device.tablet} {
-		grid-row: 1 / spam 6;
+		grid-row: 1 / spam 7;
 		grid-column: 1;
-		max-width: 414px;
-		max-height: 413px;
+		max-width: 370px;
+		max-height: 370px;
 	}
 	@media ${device.laptop} {
-		grid-row: 1 / spam 6;
+		grid-row: 2 / spam 7;
 		grid-column: 1;
 		max-width: 514px;
 		max-height: 513px;
+	}
+`;
+
+export const IconTether = styled.div`
+	position: relative;
+	@media ${device.mobileXS} {
+		width: 26px;
+		height: 26px;
+	}
+	@media ${device.tablet} {
+		width: 35px;
+		height: 35px;
+	}
+`;
+
+export const IconBusd = styled.div`
+	position: relative;
+	@media ${device.mobileXS} {
+		width: 26px;
+		height: 26px;
+	}
+	@media ${device.tablet} {
+		width: 35px;
+		height: 35px;
 	}
 `;

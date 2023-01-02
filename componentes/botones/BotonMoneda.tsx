@@ -1,7 +1,6 @@
-import Image from 'next/image';
 import styled from 'styled-components';
 import { device } from '../../utils/devices';
-import { FC } from 'react';
+import { FC, PropsWithChildren } from 'react';
 
 const Boton = styled.button`
 	display: flex;
@@ -42,22 +41,17 @@ const Boton = styled.button`
 `;
 interface Props {
 	text?: string;
-	src?: string;
-	width?: number;
-	height?: number;
 	onClick?: () => void;
 }
 
-export const BotonMoneda: FC<Props> = ({
+export const BotonMoneda: FC<PropsWithChildren<Props>> = ({
 	text,
-	src,
-	width,
-	height,
 	onClick,
+	children,
 }) => {
 	return (
 		<Boton onClick={onClick}>
-			<Image src={src} alt='img' width={width} height={height} />
+			{children}
 			{text}
 		</Boton>
 	);

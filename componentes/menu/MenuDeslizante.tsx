@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { useEstado } from '../../hooks';
 import { BotonImagen } from '../botones';
 import { Menu } from './Menu';
@@ -17,23 +19,27 @@ export const MenuDeslizante = () => {
 				<MenuTelefono>
 					<EstiloMenu>
 						<ContenedorBotonX>
-							<BotonImagen
-								onClick={mostrarOcultar}
-								src='/images/iconos/icon_x.png'
-								width={31}
-								height={31}
-							/>
+							<BotonImagen onClick={mostrarOcultar}>
+								<Image
+									src='/images/iconos/icon_x.png'
+									alt='Img'
+									width={31}
+									height={31}
+								/>
+							</BotonImagen>
 						</ContenedorBotonX>
 						<Menu />
 					</EstiloMenu>
 				</MenuTelefono>
 			) : (
-				<BotonImagen
-					onClick={mostrarOcultar}
-					src='/images/iconos/icon_menu.png'
-					width={33}
-					height={33}
-				/>
+				<BotonImagen onClick={mostrarOcultar}>
+					<Image
+						src='/images/iconos/icon_menu.png'
+						alt='Img'
+						width={31}
+						height={31}
+					/>
+				</BotonImagen>
 			)}
 		</ContenedorMenuTlf>
 	);

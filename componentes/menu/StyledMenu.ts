@@ -85,3 +85,14 @@ export const Texto = styled.h3`
 		display: none;
 	}
 `;
+
+export const LogIng = styled.div`
+	@media ${device.mobileXS} {
+		width: 25px;
+		height: 25px;
+	}
+	@media ${device.tablet} {
+		width: 33px;
+		height: 33px;
+	}
+`;

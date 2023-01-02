@@ -17,10 +17,10 @@ export const Cuerpo = styled.div`
 	min-height: 600px;
 
 	@media ${device.mobileXS} {
-		height: 73.84vh;
+		height: 72.84vh;
 	}
 	@media ${device.tablet} {
-		height: 73.84vh;
+		height: 62.84vh;
 	}
 `;
 

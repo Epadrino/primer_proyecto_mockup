@@ -4,9 +4,10 @@ import { device } from '../../utils/devices';
 
 export const Contenedor = styled.div`
 	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	height: 70.91vh;
+	align-items: center;
+	justify-content: center;
+	min-height: 550px;
+	overflow: hidden;
 
 	@media ${device.mobileXS} {
 		height: 91.36vh;
@@ -14,6 +15,18 @@ export const Contenedor = styled.div`
 	@media ${device.tablet} {
 		height: 70.91vh;
 		gap: 5%;
+	}
+`;
+export const Caja = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+
+	width: 100%;
+	height: 100%;
+	@media ${device.mobileXS} {
+	}
+	@media ${device.tablet} {
 	}
 `;
 
@@ -90,13 +103,11 @@ export const ContenedorDer = styled.div`
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	overflow: hidden;
 `;
 export const ContenedorDeProductos = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: row;
 
 	@media ${device.mobileXS} {
 		gap: 10px;
@@ -113,21 +124,14 @@ export const Productos = styled.div`
 	background: ${(props) => props.theme.backgrounds.producs};
 	border-radius: 10px;
 
-	position: relative;
-	width: 376px;
 	:after {
 		content: '';
 		display: block;
 		padding-bottom: 100%;
 	}
-	height: 376px;
-	:after {
-		content: '';
-		display: block;
-		padding-top: 100%;
-	}
 
 	@media ${device.mobileXS} {
+		width: 230px;
 		max-width: 230px;
 		max-height: 230px;
 	}
@@ -136,6 +140,7 @@ export const Productos = styled.div`
 		max-height: 275px;
 	}
 	@media ${device.laptop} {
+		width: 28vw;
 		max-width: 400px;
 		max-height: 400px;
 	}
@@ -156,5 +161,17 @@ export const ContenedorDeFlecha = styled.div`
 	}
 	@media ${device.laptop} {
 		display: contents;
+	}
+`;
+
+export const Icon = styled.div`
+	position: relative;
+	@media ${device.mobileXS} {
+		width: 46px;
+		height: 46px;
+	}
+	@media ${device.tablet} {
+		width: 46px;
+		height: 46px;
 	}
 `;

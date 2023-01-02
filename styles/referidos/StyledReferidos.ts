@@ -25,6 +25,9 @@ export const ContenedorRuta = styled.div`
 `;
 
 export const FondoFlecha = styled.span`
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	background: ${(props) => props.theme.backgrounds.secondary};
 	border-radius: 10px;
 	width: 40px;
@@ -46,9 +49,10 @@ export const Titulo = styled.div`
 `;
 export const ContenedorTabla = styled.div`
 	display: flex;
-	align-items: flex-start;
-
+	align-items: center;
+	justify-content: center;
 	width: 100%;
+	height: 100%;
 `;
 
 export const BotonLista = styled.div``;
@@ -58,4 +62,16 @@ export const ContenedorListaBoton = styled.div`
 	align-items: center;
 	height: 100px;
 	width: 100%;
+`;
+
+export const Flecha = styled.div`
+	position: relative;
+	@media ${device.mobileXS} {
+		width: 15.52px;
+		height: 31.05px;
+	}
+	@media ${device.tablet} {
+		width: 15.52px;
+		height: 31.05px;
+	}
 `;

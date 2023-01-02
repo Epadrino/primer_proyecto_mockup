@@ -2,6 +2,19 @@ import styled from 'styled-components';
 import { device } from '../../utils/devices';
 
 export const Contenedor = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+
+	@media ${device.mobileXS} {
+		height: 85.36vh;
+	}
+	@media ${device.tablet} {
+		height: 70.91vh;
+	}
+`;
+export const Caja = styled.div`
 	display: grid;
 	align-items: center;
 	width: 100%;
@@ -13,13 +26,16 @@ export const Contenedor = styled.div`
 	@media ${device.tablet} {
 		grid-template-columns: 6vw 30% auto 6vw;
 	}
+	@media ${device.laptopL} {
+		grid-template-columns: 6vw 44vw 44vw 6vw;
+	}
 `;
 
 export const ContenedorIzq = styled.div`
 	display: flex;
 	flex-direction: column;
-
-	width: 100%;
+	justify-content: center;
+	align-items: center;
 
 	@media ${device.mobileXS} {
 		grid-row: 1;
@@ -34,7 +50,7 @@ export const ContenedorIzq = styled.div`
 export const ContenedorDeTexto = styled.div`
 	display: flex;
 	flex-direction: column;
-	width: 100%;
+	width: auto;
 
 	@media ${device.mobileXS} {
 	}
@@ -81,6 +97,8 @@ export const Parrafo = styled.div`
 	}
 `;
 export const ContenedorDeProductos = styled.div`
+	display: flex;
+	justify-content: center;
 	width: 100%;
 	height: 100%;
 	@media ${device.mobileXS} {
@@ -127,7 +145,7 @@ export const ContenedorDeBotones = styled.div`
 		gap: 20px;
 	}
 	@media ${device.laptop} {
-		justify-content: start;
+		justify-content: center;
 		align-items: flex-start;
 		flex-wrap: nowrap;
 

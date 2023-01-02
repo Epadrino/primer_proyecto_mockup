@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import { device } from '../../utils/devices';
-import { FC } from 'react';
+import { Children, FC, PropsWithChildren } from 'react';
 
 const BotonDeWallet = styled.button`
 	display: flex;
@@ -69,22 +69,16 @@ const Texto = styled.h1`
 	}
 `;
 interface Props {
-	src: string;
-	width: number;
-	height: number;
+	text?: string;
 }
-export const BotonWallet: FC<Props> = ({ src, width, height }) => {
+export const BotonWallet: FC<PropsWithChildren<Props>> = ({
+	children,
+	text,
+}) => {
 	return (
 		<BotonDeWallet>
-			<FondodeIcono>
-				<Image
-					src={src}
-					alt='Cargando Logo'
-					width={width}
-					height={height}
-				/>
-			</FondodeIcono>
-			<Texto>Connect with MetaMask</Texto>
+			<FondodeIcono>{children}</FondodeIcono>
+			<Texto>{text}</Texto>
 		</BotonDeWallet>
 	);
 };

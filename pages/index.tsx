@@ -1,4 +1,5 @@
 import Image from 'next/image';
+
 import { BotonAccion } from '../componentes/botones';
 import { Input } from '../componentes/inputs';
 import { LayoutInicio } from '../componentes/layaouts';
@@ -18,11 +19,13 @@ export default function Referido() {
 			<ContenedorCuerpo>
 				<ContenedorUno>
 					<ContenedorImangen>
-						<Image
-							src='/images/logo/logo_mockup.png'
-							alt='Imagen'
-							fill
-						/>
+						<div>
+							<Image
+								src='/images/logo/logo_mockup.png'
+								alt='Imagen'
+								fill
+							/>
+						</div>
 					</ContenedorImangen>
 				</ContenedorUno>
 				<ContenedorDos>

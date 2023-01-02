@@ -30,6 +30,7 @@ import {
 	Contenedor1,
 	Contenedor2,
 	Cuerpo,
+	Logo,
 } from './StyledLayoutDentro';
 
 interface Props {
@@ -57,10 +58,14 @@ export const LayoutDentro: FC<PropsWithChildren<Props>> = ({
 			</Head>
 			<Cabezera>
 				<ContenedorDeLogo>
-					<img
-						src='/images/logo/logo_mockup.png'
-						alt='Cargando Logo'
-					/>
+					<Logo>
+						<Image
+							src='/images/logo/logo_mockup.png'
+							alt='Img'
+							fill
+						/>
+					</Logo>
+
 					<Titulo>LOGO MOCKUP</Titulo>
 				</ContenedorDeLogo>
 				<ContenedorDeMenu>

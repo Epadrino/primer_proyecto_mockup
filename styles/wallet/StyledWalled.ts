@@ -19,13 +19,13 @@ export const ContenedorUno = styled.div`
 	padding-top: 0px;
 
 	@media ${device.mobileXS} {
-		img {
+		div {
 			width: 159;
 			height: 161;
 		}
 	}
 	@media ${device.tablet} {
-		img {
+		div {
 			width: 296;
 			height: 299;
 		}
@@ -83,5 +83,29 @@ export const ContenedorTexto = styled.div`
 			display: block;
 			padding-bottom: 10%;
 		}
+	}
+`;
+
+export const Metamask = styled.div`
+	position: relative;
+	@media ${device.mobileXS} {
+		width: 30px;
+		height: 30px;
+	}
+	@media ${device.tablet} {
+		width: 45px;
+		height: 45px;
+	}
+`;
+
+export const WalletConnect = styled.div`
+	position: relative;
+	@media ${device.mobileXS} {
+		width: 31px;
+		height: 31px;
+	}
+	@media ${device.tablet} {
+		width: 51px;
+		height: 51px;
 	}
 `;
