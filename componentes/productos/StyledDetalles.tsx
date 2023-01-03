@@ -214,3 +214,8 @@ export const CajaBotonAccion = styled.div`
 		margin: 0px 0px;
 	}
 `;
+
+export const Icon = styled.div`
+	width: 20px;
+	height: 20px;
+`;

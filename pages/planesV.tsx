@@ -1,6 +1,8 @@
+import { useEffect } from 'react';
 import { BotonAccion } from '../componentes/botones';
 import { LayoutDentro } from '../componentes/layaouts';
 import { Detalles, Productos } from '../componentes/productos';
+import { useEstado } from '../hooks';
 import {
 	Contenedor,
 	ContenedorDeBotones,
@@ -13,6 +15,9 @@ import {
 } from '../styles/planesV/StyledPlanesV';
 
 export default function PlanesV() {
+	const { estado, mostrarOcultar } = useEstado();
+	useEffect(() => {}, [mostrarOcultar]);
+
 	return (
 		<LayoutDentro title='PlanesV'>
 			<Contenedor>
@@ -33,11 +38,15 @@ export default function PlanesV() {
 					</ContenedorDeProductos>
 					<ContenedorDeBotones>
 						<BotonAccion text='Ir a mi Pagar' />
-						<BotonAccion text='Ver detalles' />
+
+						<BotonAccion
+							onClick={mostrarOcultar}
+							text='Ver detalles'
+						/>
 					</ContenedorDeBotones>
 				</Caja>
 			</Contenedor>
-			{/* <Detalles /> */}
+			{estado ? <Detalles onClick={mostrarOcultar} /> : null}
 		</LayoutDentro>
 	);
 }

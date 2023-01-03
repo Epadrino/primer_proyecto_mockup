@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import { FC, useEffect } from 'react';
+import { useEstado } from '../../hooks';
 import { BotonAccion, BotonImagen } from '../botones';
 import {
 	Contenedor,
@@ -9,19 +12,26 @@ import {
 	CajaBotonSalir,
 	CajaBotonAccion,
 	FondoBoton,
+	Icon,
 } from './StyledDetalles';
-
-export const Detalles = () => {
+interface Props {
+	onClick: () => void;
+}
+export const Detalles: FC<Props> = ({ onClick }) => {
 	return (
 		<Contenedor>
 			<Caja>
 				<CajaBotonSalir>
 					<FondoBoton>
-						<BotonImagen
-							src='/images/iconos/icon_x_black.png'
-							width={20}
-							height={20}
-						/>
+						<BotonImagen onClick={onClick}>
+							<Icon>
+								<Image
+									src='/images/iconos/icon_x_black.png'
+									alt='Img'
+									fill
+								/>
+							</Icon>
+						</BotonImagen>
 					</FondoBoton>
 				</CajaBotonSalir>
 				<Producto></Producto>

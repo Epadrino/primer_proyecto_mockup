@@ -1,6 +1,6 @@
 import { BotonAccion } from '../componentes/botones';
 import { LayoutDentro } from '../componentes/layaouts';
-import { TablaInformativa } from '../componentes/tabla/TablaInformativa';
+import { TablaInformativa } from '../componentes/tabla/informativa/TablaInformativa';
 
 import {
 	Contenedor,

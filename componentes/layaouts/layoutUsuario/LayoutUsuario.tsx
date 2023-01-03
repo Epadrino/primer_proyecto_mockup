@@ -1,21 +1,19 @@
 import Head from 'next/head';
+
 import { FC, PropsWithChildren } from 'react';
-import { Idioma } from '../idiomas';
+import { Idioma } from '../../idiomas';
 import {
 	Cabecera,
-	ContenedorDeTexto,
 	ContenedorIdioma,
-	Cuerpo,
+	CuerpoUsuario,
 	Espaciador,
-	PieDePagina,
-	TextodeAbajo,
-} from './StyledLayouts';
+} from '../StyledLayouts';
 
 interface Props {
 	title?: string;
 	description?: string;
 }
-export const LayoutInicio: FC<PropsWithChildren<Props>> = ({
+export const LayoutUsuario: FC<PropsWithChildren<Props>> = ({
 	children,
 	title,
 	description,
@@ -39,14 +37,7 @@ export const LayoutInicio: FC<PropsWithChildren<Props>> = ({
 					<Espaciador />
 				</ContenedorIdioma>
 			</Cabecera>
-			<Cuerpo>{children}</Cuerpo>
-			<PieDePagina>
-				<ContenedorDeTexto>
-					<TextodeAbajo>
-						Vive la mejor experiencia y obtén los mejores resulados.
-					</TextodeAbajo>
-				</ContenedorDeTexto>
-			</PieDePagina>
+			<CuerpoUsuario>{children}</CuerpoUsuario>
 		</>
 	);
 };

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { BotonImagen } from '../componentes/botones/BotonImagen';
 import { LayoutDentro } from '../componentes/layaouts';
-import { TablaReferidos } from '../componentes/tabla';
+import { TablaMovimientos } from '../componentes/tabla';
 import {
 	Contenedor,
 	ContenedorTabla,
@@ -13,9 +13,9 @@ import {
 	Flecha,
 } from '../styles/referidos/StyledReferidos';
 
-export default function referidos() {
+export default function Movimientos() {
 	return (
-		<LayoutDentro title='Referidos'>
+		<LayoutDentro title='Movimientos'>
 			<Contenedor>
 				<ContenedorRuta>
 					<FondoFlecha>
@@ -29,10 +29,10 @@ export default function referidos() {
 							</Flecha>
 						</BotonImagen>
 					</FondoFlecha>
-					<Titulo>Mis Referidos</Titulo>
+					<Titulo>Mis movimientos</Titulo>
 				</ContenedorRuta>
 				<ContenedorTabla>
-					<TablaReferidos />
+					<TablaMovimientos />
 				</ContenedorTabla>
 				<ContenedorListaBoton>
 					<span>

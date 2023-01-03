@@ -2,7 +2,7 @@ import { FC } from 'react';
 import styled from 'styled-components';
 import { device } from '../../utils/devices';
 
-const BotonDeContinuar = styled.button`
+const BotonDeAccion = styled.button`
 	font-family: ${(props) => props.theme.fonts.primary};
 	font-weight: 700;
 	background: transparent;
@@ -39,5 +39,5 @@ interface Props {
 }
 
 export const BotonAccion: FC<Props> = ({ text, onClick }) => {
-	return <BotonDeContinuar onClick={onClick}>{text}</BotonDeContinuar>;
+	return <BotonDeAccion onClick={onClick}>{text}</BotonDeAccion>;
 };

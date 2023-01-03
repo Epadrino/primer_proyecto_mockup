@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { device } from '../../utils/devices';
+import { device } from '../../../utils/devices';
 
 export const Contenedor = styled.div`
 	width: 100%;
@@ -20,6 +20,7 @@ export const Contenedor = styled.div`
 	}
 	@media ${device.tablet} {
 		overflow: hidden;
+		padding-bottom: 30px;
 	}
 `;
 
@@ -30,7 +31,7 @@ export const Tabla = styled.table`
 	text-align: left;
 
 	@media ${device.mobileXS} {
-		width: 1100px;
+		width: 600px;
 		font-size: 15px;
 	}
 	@media ${device.tablet} {
@@ -45,9 +46,8 @@ export const TablaCabezeraColumnaItem = styled.th`
 `;
 export const TablaCuerpo = styled.tbody``;
 export const TablaCuerpoColumna = styled.tr`
-	height: 30px;
-	:nth-child(even) {
-		background: ${(props) => props.theme.backgrounds.header};
+	:nth-child(odd) {
+		background: ${(props) => props.theme.backgrounds.primary};
 	}
 `;
 export const TablaCuerpoColumnaItem = styled.th`

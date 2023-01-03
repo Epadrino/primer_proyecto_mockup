@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { device } from '../../utils/devices';
+import { device } from '../../../utils/devices';
 
 export const ContenedorLayout = styled.div`
 	display: flex;
@@ -98,8 +98,7 @@ export const ContenedorMenuEsc = styled.div`
 		display: flex;
 	}
 `;
-
-export const PieDePagina = styled.div`
+export const PiePagina = styled.div`
 	width: 100%;
 	height: 14.45vh;
 	background: ${(props) => props.theme.backgrounds.primary};

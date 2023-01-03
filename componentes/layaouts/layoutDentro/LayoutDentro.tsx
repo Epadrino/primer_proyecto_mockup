@@ -2,35 +2,30 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import { FC, PropsWithChildren } from 'react';
+import { EnlacePieDePagina } from '../../enlaces';
 
-import { EnlacePieDePagina } from '../enlaces';
-import { Menu, MenuDeslizante } from '../menu';
-import {
-	RedSocialDiscord,
-	RedSocialFacebook,
-	RedSocialGmail,
-	RedSocialInstagram,
-	RedSocialTwitter,
-} from '../redesSociales';
+import { Menu, MenuDeslizante } from '../../menu';
+import { RedSocial } from '../../redesSociales';
+
 import {
 	ContenedorMenuEsc,
 	Cabezera,
 	ContenedorDeLogo,
 	ContenedorLayout,
-	ContenedorRedesSociales,
-	PieDePagina,
 	Titulo,
+	ContenedorDeMenu,
+	Cuerpo,
+	Logo,
+	PiePagina,
+	Contenedor1,
+	Contenedor2,
+	ContenedorTextoUnoYDos,
 	ContenedorTextosUno,
 	ContenedorTextosDos,
 	Separador,
-	ContenedorTextoUnoYDos,
-	TextoRedes,
-	ContenedorDeMenu,
 	Contenedor3,
-	Contenedor1,
-	Contenedor2,
-	Cuerpo,
-	Logo,
+	TextoRedes,
+	ContenedorRedesSociales,
 } from './StyledLayoutDentro';
 
 interface Props {
@@ -76,7 +71,7 @@ export const LayoutDentro: FC<PropsWithChildren<Props>> = ({
 				</ContenedorDeMenu>
 			</Cabezera>
 			<Cuerpo>{children}</Cuerpo>
-			<PieDePagina>
+			<PiePagina>
 				<Contenedor1>
 					<Image
 						src='/images/logo/logo_mockup.png'
@@ -108,14 +103,39 @@ export const LayoutDentro: FC<PropsWithChildren<Props>> = ({
 				<Contenedor3>
 					<TextoRedes>Únete a la comunidad</TextoRedes>
 					<ContenedorRedesSociales>
-						<RedSocialDiscord href='' />
-						<RedSocialFacebook href='' />
-						<RedSocialGmail href='' />
-						<RedSocialInstagram href='' />
-						<RedSocialTwitter href='' />
+						<RedSocial
+							href=''
+							src='/images/iconos/icon_discord.png'
+							width={22.86}
+							height={25.33}
+						/>
+						<RedSocial
+							href=''
+							src='/images/iconos/icon_facebook.png'
+							width={22.86}
+							height={22.72}
+						/>
+						<RedSocial
+							href=''
+							src='/images/iconos/icon_gmail.png'
+							width={22.86}
+							height={17.14}
+						/>
+						<RedSocial
+							href=''
+							src='/images/iconos/icon_instagram.png'
+							width={22.86}
+							height={22.86}
+						/>
+						<RedSocial
+							href=''
+							src='/images/iconos/icon_twitter.png'
+							width={22.86}
+							height={18.58}
+						/>
 					</ContenedorRedesSociales>
 				</Contenedor3>
-			</PieDePagina>
+			</PiePagina>
 		</ContenedorLayout>
 	);
 };

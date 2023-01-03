@@ -6,17 +6,25 @@ import { EnlaceRedes } from './StyledRedesSociales';
 
 interface Props {
 	href: string;
+	src: string;
+	width: number;
+	height: number;
 }
 
-export const RedSocialTwitter: FC<PropsWithChildren<Props>> = ({ href }) => {
+export const RedSocial: FC<PropsWithChildren<Props>> = ({
+	href,
+	src,
+	width,
+	height,
+}) => {
 	return (
 		<Link href={href} passHref legacyBehavior>
 			<EnlaceRedes>
 				<Image
-					src='/images/iconos/icon_twitter.png'
+					src={src}
 					alt='Default Image'
-					width={22.86}
-					height={18.58}
+					width={width}
+					height={height}
 				/>
 			</EnlaceRedes>
 		</Link>

@@ -7,7 +7,7 @@ import {
 	TablaCuerpo,
 	TablaCuerpoColumna,
 	TablaCuerpoColumnaItem,
-} from './StyledTabla';
+} from './StyledInformativa';
 
 export const TablaInformativa = () => {
 	return (

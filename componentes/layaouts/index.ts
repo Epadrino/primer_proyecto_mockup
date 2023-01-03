@@ -1,3 +1,3 @@
-export * from './LayoutDentro';
-export * from './LayoutInicio';
-export * from './LayoutUsuario';
+export * from './layoutDentro/LayoutDentro';
+export * from './layoutInicio/LayoutInicio';
+export * from './layoutUsuario/LayoutUsuario';
