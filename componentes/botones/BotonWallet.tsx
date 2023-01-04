@@ -70,13 +70,15 @@ const Texto = styled.h1`
 `;
 interface Props {
 	text?: string;
+	onClick: () => void;
 }
 export const BotonWallet: FC<PropsWithChildren<Props>> = ({
 	children,
 	text,
+	onClick,
 }) => {
 	return (
-		<BotonDeWallet>
+		<BotonDeWallet onClick={onClick}>
 			<FondodeIcono>{children}</FondodeIcono>
 			<Texto>{text}</Texto>
 		</BotonDeWallet>
