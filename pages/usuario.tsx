@@ -1,9 +1,14 @@
 import Image from 'next/image';
 
+import { useEffect, useState } from 'react';
+
+import { create } from 'domain';
+
 import { BotonAccion } from '../componentes/botones';
 import { Input } from '../componentes/inputs';
 import { LayoutUsuario } from '../componentes/layaouts';
 import { useEstado } from '../hooks';
+import Validator from '../hooks/validator';
 
 import {
 	Contenedor,
@@ -21,9 +26,39 @@ import {
 	ContenedorCuerpo,
 	BotonDeLeerMas,
 } from '../styles/usuario/StyledUsuario';
+import { toast } from 'react-toastify';
+import { UserService } from '../utils/requests/user.service';
+import { Creado } from '../componentes/mensajes';
 
 export default function Usuario() {
 	const { estado, mostrarOcultar } = useEstado(false);
+	const { inputs, handleChange, onKeyPressed } = Validator();
+	const [err, setErr] = useState<boolean>(false);
+	const [ssuccefull, setSsuccefull] = useState<boolean>(false);
+
+	useEffect(() => {
+		setErr(false);
+	}, [inputs]);
+
+	const create = async () => {
+		await UserService.register(inputs).then((res) => {
+			if (res.status) {
+				localStorage.setItem('user', JSON.stringify(res.data));
+				setSsuccefull(true);
+			}
+			if (res.errors) {
+				if (res.errors[0].field == 'username') {
+					setErr(true);
+				}
+				toast.warning(
+					res.errors[0].message + ' ' + res.errors[0].field,
+					{
+						toastId: 'errorUsername',
+					}
+				);
+			}
+		});
+	};
 
 	return (
 		<LayoutUsuario title='Usuario'>
@@ -41,7 +76,13 @@ export default function Usuario() {
 					<TituloUsuario>Crea un usuario</TituloUsuario>
 					{/* <Pregunta>¿Tienes dudas?</Pregunta> */}
 					<Contenedor>
-						<Input placeholder={'Código de referido'} />
+						<Input
+							type='text'
+							name='username'
+							placeholder={'Código de referido'}
+							onKeyDown={onKeyPressed}
+							onChange={handleChange}
+						/>
 						<ContenedorIcon>
 							<div>
 								<Image
@@ -67,7 +108,12 @@ export default function Usuario() {
 							</BotonDeLeerMas>
 						</MensajeDos>
 					</ContenedorMensajeUno> */}
-					<Input placeholder={'correo'} />
+					<Input
+						type='email'
+						name='email'
+						placeholder='Ingresa un correo electrónico'
+						onChange={handleChange}
+					/>
 					<ContenedorMensajeTres>
 						<MensajeTres>
 							Lo usaremos únicamente para enviarte información
@@ -75,10 +121,14 @@ export default function Usuario() {
 						</MensajeTres>
 					</ContenedorMensajeTres>
 					<ContenedorDeBoton>
-						<BotonAccion text='Continuar' />
+						<BotonAccion
+							text='Continuar'
+							onClick={() => create()}
+						/>
 					</ContenedorDeBoton>
 				</ContenedorDos>
 			</ContenedorCuerpo>
+			<Creado active={ssuccefull} />
 		</LayoutUsuario>
 	);
 }

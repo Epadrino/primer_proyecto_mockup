@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { device } from '../../utils/devices';
 
-export const Contenedor = styled.div`
-	display: flex;
+export const Contenedor = styled.div<{ active: boolean }>`
+	display: ${({ active }) => (active === true ? 'flex' : 'none')};
 	align-items: center;
 	justify-content: center;
 	position: absolute;
