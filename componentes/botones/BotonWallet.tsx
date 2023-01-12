@@ -1,6 +1,7 @@
+import Image from 'next/image';
 import styled from 'styled-components';
 import { device } from '../../utils/devices';
-import { FC, PropsWithChildren } from 'react';
+import { Children, FC, PropsWithChildren } from 'react';
 
 const BotonDeWallet = styled.button`
 	display: flex;

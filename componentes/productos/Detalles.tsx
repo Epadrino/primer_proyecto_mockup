@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { FC } from 'react';
-
+import { FC, useEffect } from 'react';
+import { useEstado } from '../../hooks';
 import { BotonAccion, BotonImagen } from '../botones';
 import {
 	Contenedor,
@@ -16,9 +16,8 @@ import {
 } from './StyledDetalles';
 interface Props {
 	onClick: () => void;
-	price: number;
 }
-export const Detalles: FC<Props> = ({ price, onClick }) => {
+export const Detalles: FC<Props> = ({ onClick }) => {
 	return (
 		<Contenedor>
 			<Caja>
@@ -37,7 +36,7 @@ export const Detalles: FC<Props> = ({ price, onClick }) => {
 				</CajaBotonSalir>
 				<Producto></Producto>
 				<Precio>
-					<h1>{price.toLocaleString()} USD</h1>
+					<h1>200 USD</h1>
 				</Precio>
 				<CajaBotonAccion>
 					<BotonAccion text={'¡Lo quiero!'} />

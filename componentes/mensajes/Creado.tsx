@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import React from 'react';
 import { BotonAccion } from '../botones';
 import {
@@ -9,15 +8,9 @@ import {
 	MensajeUno,
 } from './StyledMensaje';
 
-type Props = {
-	active: boolean;
-};
-
-export const Creado = ({ active }: Props) => {
-	const router = useRouter();
-
+export const Creado = () => {
 	return (
-		<Contenedor active={active}>
+		<Contenedor>
 			<ContenedorMensaje>
 				<Caja>
 					<Image
@@ -29,10 +22,7 @@ export const Creado = ({ active }: Props) => {
 					<MensajeUno>
 						Tu cuenta ha sido creada correctamente
 					</MensajeUno>
-					<BotonAccion
-						text='Continuar'
-						onClick={() => router.push('/planesV')}
-					/>
+					<BotonAccion text='Continuar' />
 				</Caja>
 			</ContenedorMensaje>
 		</Contenedor>

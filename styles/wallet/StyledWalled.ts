@@ -20,20 +20,17 @@ export const ContenedorUno = styled.div`
 
 	@media ${device.mobileXS} {
 		div {
-			position: relative;
-			width: 159px;
-			height: 161px;
+			width: 159;
+			height: 161;
 		}
 	}
 	@media ${device.tablet} {
 		div {
-			position: relative;
-			width: 296px;
-			height: 299px;
+			width: 296;
+			height: 299;
 		}
 	}
 `;
-export const ContenedorImagen = styled.div``;
 export const TituloWalled = styled.h1`
 	display: flex;
 	justify-content: center;

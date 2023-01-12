@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from 'react';
 import UseContext from './UseContext';
 import UseReducer from './UseReducer';
-import Connect from '../../hooks';
+import Connect from '../../hooks/connect';
 import { GET_USER, GET_ID, GET_PROVIDER, SET_USER, GET_BALANCE } from './types';
 
 const UseState = (props) => {
