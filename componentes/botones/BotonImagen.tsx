@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { FC, PropsWithChildren } from 'react';
 import styled from 'styled-components';
 
